@@ -8,7 +8,7 @@ import sys
 
 # Importiamo le classi necessarie
 from TempVae import TempVAE
-from analisi import FinancialDataset, run_inference, run_generation
+from main import FinancialDataset, run_inference, run_generation
 
 # ==========================================
 # CONFIGURAZIONE DATASET-CENTRICA
@@ -228,8 +228,8 @@ def run_prediction_for_model(model_cfg, data_path, train_split, alpha):
     # 1. Init Dataset specifico
     ds = FinancialDataset(data_path, seq_len)
     # Sovrascriviamo split se diverso nel config generale (ma qui ds lo calcola nel init)
-    # FinancialDataset usa CONFIG globale in analisi.py? 
-    # In analisi.py: split_idx = int(len(self.data) * CONFIG['train_split'])
+    # FinancialDataset usa CONFIG globale in main.py?
+    # In main.py: split_idx = int(len(self.data) * CONFIG['train_split'])
     # Se cambiamo train_split in CONFIG globale prima di init, funziona.
     
     input_dim = ds.X_train.shape[-1]
@@ -306,8 +306,8 @@ def process_scenario(scenario_name, config):
     print(f"\n>>> ANALISI SCENARIO: {scenario_name}")
     
     # Impostiamo CONFIG globale in analisi (hack necessario perché FinancialDataset la usa)
-    import analisi
-    analisi.CONFIG['train_split'] = config['train_split']
+    import main
+    main.CONFIG['train_split'] = config['train_split']
     
     # DataFrame contenitore: Indicizzato per Data, contiene Actual e Colonne Modelli
     # Inizializziamo con Actual vuoto, lo riempiremo col primo modello

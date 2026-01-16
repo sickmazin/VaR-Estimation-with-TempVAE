@@ -9,7 +9,7 @@ import sys
 sys.path.append(os.getcwd())
 
 from inference_comparison import SCENARI, run_prediction_for_model, OUTPUT_DIR
-import analisi
+import main
 
 def plot_with_zooms(df_results, alpha, title, save_path):
     """

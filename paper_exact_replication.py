@@ -8,11 +8,13 @@ import matplotlib.pyplot as plt
 import os
 import sys
 from datetime import datetime
+import scipy.stats as stats
+from statsmodels.graphics.tsaplots import plot_acf
 
 # Import del modello (già modificato con Fixed Prior)
 from TempVae import TempVAE
 # Import delle funzioni di analisi (per evitare duplicazione codice)
-from analisi import (
+from main import (
     kupiec_pof_test, 
     christoffersen_test, 
     plot_zoomed_regimes, 
@@ -27,8 +29,8 @@ from analisi import (
 CONFIG = {
     'tickers': [
         # Selezione RIDOTTA e ROBUSTA di titoli DAX (Blue Chips sicure)
-        'ALV.DE', 'BAS.DE', 'BMW.DE', 'DBK.DE', 'DTE.DE',
-        'EOAN.DE', 'IFX.DE', 'MUV2.DE', 'RWE.DE', 'SAP.DE', 'SIE.DE','SPY', '^VIX', 'GLD',
+        'ALV.DE', 'BAS.DE', 'BMW.DE', 'DBK.DE', 'DTE.DE', 
+        'EOAN.DE', 'IFX.DE', 'MUV2.DE', 'RWE.DE', 'SAP.DE', 'SIE.DE', 'SPY', '^VIX', 'GLD',
     ],
     'start_date': '2018-10-01', # Periodo più recente e stabile
     'end_date': '2021-07-01',
@@ -202,7 +204,8 @@ def train_paper_model(X_train):
     model.train()
     
     global_step = 0
-    
+    loss_history = {'total': [], 'nll': [], 'kl': []} # Nuova struttura per salvare i componenti della loss
+
     for epoch in range(CONFIG['epochs']):
         
         # --- CALCOLO BETA ANNEALING (App. A.1) ---
@@ -252,13 +255,18 @@ def train_paper_model(X_train):
             print(f"Epoch {epoch+1:04d} | Beta: {beta:.4f} | Loss: {epoch_loss/len(train_loader):.4f} | "
                   f"NLL: {epoch_nll/len(train_loader):.4f} | KL: {epoch_kl/len(train_loader):.4f} | "
                   f"LR: {optimizer.param_groups[0]['lr']:.6f}")
+        
+        # Salva la storia
+        loss_history['total'].append(epoch_loss/len(train_loader))
+        loss_history['nll'].append(epoch_nll/len(train_loader))
+        loss_history['kl'].append(epoch_kl/len(train_loader))
             
-    return model
+    return model, loss_history
 
 # ==========================================
 # 3. EVALUATION PIPELINE (ANALISI.PY PORTING)
 # ==========================================
-def evaluate_paper_model(model, X_test, dataset_info):
+def evaluate_paper_model(model, X_test, dataset_info, loss_history):
     print("\n>>> Avvio Valutazione...")
     model.eval()
     
@@ -269,6 +277,7 @@ def evaluate_paper_model(model, X_test, dataset_info):
     X_test_tensor = X_test.to(CONFIG['device'])
     var_forecasts = []
     actual_returns = []
+    residuals = [] # Per QQ-Plot e ACF
     
     # Portfolio Equi-Weighted
     n_assets = X_test.shape[-1]
@@ -298,7 +307,7 @@ def evaluate_paper_model(model, X_test, dataset_info):
         # Nota: usiamo solo la diagonale per il sampling MC veloce, assumendo che il fattore rank-1 
         # sia catturato o che la diagonale domini la varianza specifica. 
         # Per massima precisione dovremmo usare anche il fattore u, ma run_generation nel file analisi
-        # restituisce solo mu e diag. Per coerenza con analisi.py usiamo questo.
+        # restituisce solo mu e diag. Per coerenza con main.py usiamo questo.
         eps = torch.randn_like(mu_r)
         r_sim_flat = mu_r + torch.sqrt(diag_r) * eps
         
@@ -324,10 +333,35 @@ def evaluate_paper_model(model, X_test, dataset_info):
             port_real = np.dot(real_ret_destand, weights)
             actual_returns.append(port_real)
             
+            # Residuo standardizzato (approssimato usando media rendimenti portfolio = 0 o media mobile)
+            # Qui usiamo la differenza diretta e normalizziamo con la volatilità stimata (proxy)
+            # Una proxy migliore per la vol è il VaR stesso (VaR = z * sigma -> sigma = VaR / z)
+            # z_alpha per 5% = -1.645
+            implied_vol = var_val / -1.645
+            if implied_vol > 0:
+                residuals.append(port_real / implied_vol)
+            else:
+                residuals.append(0)
+            
     var_forecasts = np.array(var_forecasts)
     actual_returns = np.array(actual_returns)
+    residuals = np.array(residuals)
     
     # --- SALVATAGGIO PLOT & TEST ---
+    
+    # 0. Plot Loss Components (NUOVO)
+    plt.figure(figsize=(10, 5))
+    plt.plot(loss_history['total'], label='Total Loss (ELBO)')
+    plt.plot(loss_history['nll'], label='Reconstruction (NLL)')
+    plt.plot(loss_history['kl'], label='KL Divergence')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss Value')
+    plt.title('Training Dynamics: ELBO Decomposition')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.savefig(os.path.join(CONFIG['plot_dir'], 'loss_decomposition.png'))
+    plt.close()
+
     # 1. Plot VaR vs Actual
     plt.figure(figsize=(12, 6))
     plt.plot(actual_returns, color='gray', alpha=0.5, label='Actual Portfolio Return')
@@ -339,12 +373,25 @@ def evaluate_paper_model(model, X_test, dataset_info):
     plt.savefig(os.path.join(CONFIG['plot_dir'], 'paper_var_series.png'))
     plt.close()
     
-    # 2. Test Statistici
+    # 2. Q-Q Plot dei Residui (NUOVO)
+    plt.figure(figsize=(6, 6))
+    stats.probplot(residuals, dist="norm", plot=plt)
+    plt.title("Q-Q Plot of Standardized Residuals")
+    plt.savefig(os.path.join(CONFIG['plot_dir'], 'qq_plot_residuals.png'))
+    plt.close()
+    
+    # 3. ACF dei Residui Quadrati (Volatilità) (NUOVO)
+    plt.figure(figsize=(10, 5))
+    plot_acf(residuals**2, lags=40, title='ACF of Squared Residuals (Volatility Clustering)')
+    plt.savefig(os.path.join(CONFIG['plot_dir'], 'acf_squared_residuals.png'))
+    plt.close()
+    
+    # 4. Test Statistici
     print("\n=== RISULTATI TEST STATISTICI ===")
     kupiec_pof_test(actual_returns, var_forecasts, alpha)
     christoffersen_test(actual_returns, var_forecasts, alpha)
     
-    # 3. Zoomed Regimes
+    # 5. Zoomed Regimes
     plot_zoomed_regimes(actual_returns, var_forecasts, dataset_info['test_dates'], alpha)
 
 
@@ -362,7 +409,7 @@ if __name__ == "__main__":
     # Redirect Stdout
     sys.stdout = Logger(os.path.join(run_dir, "output.txt"))
     
-    print(">>> TEMP VAE: PAPER EXACT REPLICATION PIPELINE")
+    print(">>> TEMP VAE: PAPER EXACT REPLICATION PIPELINE (UPDATED)")
     print(f">>> Log salvati in: {run_dir}")
     print("\nCONFIGURAZIONE:")
     for k, v in CONFIG.items():
@@ -373,12 +420,12 @@ if __name__ == "__main__":
     X_train, X_test, ds_info = download_and_process_data()
     
     # 2. Training
-    model = train_paper_model(X_train)
+    model, loss_hist = train_paper_model(X_train)
     
     # Salva modello
     torch.save(model.state_dict(), os.path.join(run_dir, "paper_model.pth"))
     
     # 3. Valutazione
-    evaluate_paper_model(model, X_test, ds_info)
+    evaluate_paper_model(model, X_test, ds_info, loss_hist)
     
     print("\n>>> REPLICATION COMPLETE.")
