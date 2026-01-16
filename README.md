@@ -33,7 +33,9 @@ We approximate the posterior with $q_\phi$, conditioning on the **entire** obser
 $$q_\phi(Z \mid R) = \prod_{t=1}^T q_\phi(Z_t \mid Z_{1:t-1}, R_{1:T})$$
 
 The architecture integrates global context as follows:
+
 $$ \hat{h}^z_t = \text{RNN}_I^z (\hat{h}^z_{t-1}, Z_{t-1}, [\hat{h}^{\rightarrow}_t, \hat{h}^{\leftarrow}_t]) $$
+
 Where $[
 \hat{h}^{\rightarrow}_t, \hat{h}^{\leftarrow}_t]$ are the concatenated forward and backward states of the Bi-GRU processing $R$.
 
