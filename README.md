@@ -1,120 +1,81 @@
-# TempVAE for Value-at-Risk (VaR) Estimation
+# TempVAE: Deep Stochastic Volatility for Value-at-Risk
 
-## 1. Project Overview & Scientific Context
+## 1. Scientific Abstract & Objective
 
-This repository contains a PyTorch implementation of a **Temporal Variational Autoencoder (TempVAE)** designed for the stochastic modeling of multivariate financial time series. The primary objective is the estimation of **Value-at-Risk (VaR)** through a deep generative approach that captures non-linear dependencies and latent market regimes.
+This project implements a **Temporal Variational Autoencoder (TempVAE)** for multivariate financial time series analysis. The core objective is to model the joint distribution of asset returns $R_t$ by inferring a latent stochastic process $Z_t$ that represents unobserved market factors (regimes).
 
-Unlike traditional econometric models (e.g., GARCH, DCC) or deterministic neural networks (e.g., standard LSTMs), this framework treats the latent state of the market as a stochastic variable $Z_t$. The model learns the joint probability distribution of asset returns by maximizing the Evidence Lower Bound (ELBO) on the log-likelihood of the data.
-
-### Key Features
-*   **Stochastic Latent Dynamics:** Models market regimes via autoregressive latent variables $Z_t$ conditioned on past states $Z_{<t}$ and past observations $R_{<t}$.
-*   **Variational Inference:** Utilizes a Bidirectional GRU encoder to approximate the posterior distribution $q(Z_{1:T} | R_{1:T})$.
-*   **Generative Decoder:** Reconstructs the distribution of returns using an MLP parameterization for the conditional means and covariances.
-*   **Paper Replication:** Includes specific scripts to replicate the benchmarks and results discussed in the reference literature ("A Statistical Neural Network Approach for Value-at-Risk Analysis").
+Unlike deterministic models, this architecture treats the latent state as a random variable, allowing for a probabilistic estimation of risk measures like **Value-at-Risk (VaR)**. The model optimizes the Evidence Lower Bound (ELBO) of the log-likelihood, effectively balancing the reconstruction accuracy of returns against the complexity of the latent dynamics.
 
 ---
 
-## 2. Repository Structure
+## 2. Mathematical Framework
 
-The codebase is organized to separate the model architecture, data pipeline, and analysis logic.
+The model is defined by a state-space formulation where the generative process factorizes as follows:
 
-### Core Modules
-| File | Description |
-|------|-------------|
-| `TempVae.py` | **Model Architecture**. Contains the `TempVAE` class, defining the inference network (Bi-GRU), the generative network (Autoregressive MLP), and the reparameterization logic. Implements the specific prior and posterior transitions. |
-| `vae.py` | **Data & Baselines**. Contains the `FinancialDataset` class for sliding-window sequences processing and legacy training loops. Defines the `MLP` and covariance layers. |
-| `analisi.py` | **Main Analysis Pipeline**. The primary driver for training the model, running inference, computing metrics, and generating visualizations. It orchestrates the flow from raw data to latent space inspection. |
-| `inference_utils.py` | **Utility Functions**. Helper functions for performing step-by-step inference, handling latent sampling, and transforming outputs. |
+$$
+p_\theta(R_{1:T}, Z_{1:T}) = \prod_{t=1}^{T} p_\theta(R_t \mid Z_t) p_\theta(Z_t \mid Z_{1:t-1})
+$$
 
-### Replication & Experiments
-| File | Description |
-|------|-------------|
-| `paper_exact_replication.py` | Scripts specifically tuned to reproduce the hyperparameters and experimental setup of the reference paper. |
-| `paper_exact_replication_updated.py` | An updated version of the replication script with potential optimizations or adjustments for current datasets. |
-| `inference_comparison.py` | Tools to compare the TempVAE performance against baselines or different model configurations. |
+### Generative Model (Decoder)
+The conditional distribution of returns is parameterized (typically as a Gaussian) by a neural network:
 
-### Data Directories
-*   `dataset/`: Contains raw CSV files of financial log-returns and market data (e.g., `log_returns.csv`, `market_data.csv`).
-*   `data_processed/`: serialized PyTorch tensors (`.pt`) for efficient loading of training and testing splits.
-*   `comparison_results/` & `paper_plots/`: Output directories for generated plots (latent manifolds, VaR violations, correlation heatmaps).
+$$ R_t \mid Z_t \sim \mathcal{N}(\mu_\theta(Z_t), \Sigma_\theta(Z_t)) $$
+
+### Inference Model (Encoder)
+The true posterior is approximated via a variational distribution $q_\phi$ using a **Bidirectional GRU**:
+
+$$ q_\phi(Z_t \mid Z_{1:t-1}, R_{1:T}) $$
 
 ---
 
-## 3. Mathematical Framework
+## 3. Paper Replication: "A Statistical Neural Network Approach for Value-at-Risk Analysis"
 
-The model assumes the data generation process follows:
+This repository provides an exact replication of the methodology described in:
+> *A Statistical Neural Network Approach for Value-at-Risk Analysis* (2022).
 
-$$ p(R_{1:T}, Z_{1:T}) = p(Z_1) p(R_1|Z_1) \prod_{t=2}^T p(Z_t | Z_{<t}, R_{<t}) p(R_t | Z_t) $$ 
+The results stored in `final_data/paper_run_result` represent the benchmark performance on the original dataset, achieving stable convergence and capturing significant market volatility regimes.
 
-Where:
-*   $R_t \in \mathbb{R}^d$: Observed log-returns at time $t$.
-*   $Z_t \in \mathbb{R}^k$: Latent stochastic variables (market factors).
-
-The **Inference Model** (Encoder) approximates the posterior:
-$$ q(Z_t | Z_{t-1}, R_{1:T}) $$ 
-
-implemented via a Bidirectional GRU to capture global context.
-
-The **Generative Model** (Decoder) parameterizes the conditional distribution of returns, typically as a Multivariate Normal:
-$$ p(R_t | Z_t) = \mathcal{N}(\mu_\theta(Z_t), \Sigma_\theta(Z_t)) $$ 
+### Key Replication Artifacts (`final_data/paper_run_result`)
+*   **`var_series.png`**: Visualization of the predicted VaR levels against actual log-returns. It demonstrates the model's ability to adjust risk thresholds during periods of high volatility (e.g., market crashes).
+*   **`latent_manifold.png`**: A 2D projection of the latent space $Z_t$, showing how the model clusters different market regimes.
+*   **`latent_heatmap.png`**: Correlation analysis of the latent dimensions, ensuring that the model learns disentangled or structured representations of risk factors.
+*   **`active_units.png`**: Analysis of the KL-divergence per latent unit, used to monitor "posterior collapse" and ensure all dimensions of $Z$ are contributing to the reconstruction.
+*   **`output.txt`**: Detailed logs of the replication run, including ELBO decomposition (Reconstruction Loss vs. KL Divergence).
 
 ---
 
-## 4. Installation & Setup
+## 4. Project Structure & File Roles
 
-### Prerequisites
-*   Python 3.8+
-*   PyTorch (with CUDA support recommended)
+### 🧠 Model Architecture
+*   **`TempVae.py`**: **THE MODEL**. Defines the `TempVAE` class, the Bi-GRU Encoder, and the Autoregressive Decoder.
 
-### Setup
-1.  **Clone the repository:**
-    ```bash
-    git clone <repo-url>
-    cd VaR_NN
-    ```
+### ⚙️ Main Execution & Data
+*   **`main.py`**: **ENTRY POINT**. Primary script for training and analysis. Includes the `FinancialDataset` class and `CONFIG` parameters.
 
-2.  **Create a virtual environment (optional but recommended):**
-    ```bash
-    python -m venv .venv
-    # Windows
-    .venv\Scripts\activate
-    # Unix/MacOS
-    source .venv/bin/activate
-    ```
+### 🔬 Research & Replication
+*   **`paper_exact_replication.py`**: **BENCHMARK SCRIPT**. Standalone script optimized to reproduce the 2022 paper's results using the `final_data/ORIGINALE_2` configuration.
 
-3.  **Install dependencies:**
+### 🛠 Utilities
+*   **`inference_utils.py`**: Post-training tools for VaR calculation and sampling.
+*   **`visualize_graph.py`**: Utility to visualize the neural network architecture.
+
+---
+
+## 5. Setup & Usage
+
+1.  **Install dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
+2.  **Run Standard Analysis**:
+    ```bash
+    python main.py
+    ```
+3.  **Run Exact Paper Replication**:
+    ```bash
+    python paper_exact_replication.py
+    ```
 
 ---
 
-## 5. Usage
-
-### Data Preparation
-Ensure your dataset is placed in `dataset/log_returns.csv`. The `FinancialDataset` class in `vae.py` handles the preprocessing, including standardization and sliding window creation.
-
-### Running the Analysis
-To train the model and generate analysis plots:
-```bash
-python main.py
-```
-*Check `analisi.py` to modify `CONFIG` parameters (batch size, latent dimension, epochs).*
-
-### Paper Replication
-To run the specific replication experiment:
-```bash
-python paper_exact_replication.py
-```
-
----
-
-## 6. Results & Artifacts
-Upon execution, the system generates artifacts in `extracted_outputs/` and `paper_plots/`. Key visualizations include:
-*   **Latent Space PCA/t-SNE:** Visualizing how the model clusters different market regimes (e.g., high vs. low volatility).
-*   **Reconstruction Analysis:** Comparing original returns vs. model-generated samples.
-*   **VaR Violations:** Time-series plots showing the predicted Value-at-Risk against actual losses.
-
----
 *Author: Mattia*
-*Project: Advanced Machine Learning for Finance*
