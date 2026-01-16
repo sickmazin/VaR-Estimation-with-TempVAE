@@ -1,0 +1,53 @@
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_CPU1_20260105_170301
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_CPU1_20260105_170301
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 60
+latent_dim: 10
+hidden_dim: 26
+batch_size: 140
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_CPU1_20260105_170301
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 5
+annealing_decay_rate: 0.96
+annealing_steps: 20
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0050 | Beta: 0.10 | Loss: 131.0442 | NLL: 61.6336 | KL: 729.2935
+Epoch 0100 | Beta: 0.18 | Loss: 138.1067 | NLL: 41.3450 | KL: 528.8641
+Epoch 0150 | Beta: 0.26 | Loss: 141.6073 | NLL: 27.2735 | KL: 436.0050
+Epoch 0200 | Beta: 0.33 | Loss: 152.1702 | NLL: 22.6881 | KL: 387.8928
+Epoch 0250 | Beta: 0.40 | Loss: 159.7469 | NLL: 20.3771 | KL: 349.7862
+Epoch 0300 | Beta: 0.46 | Loss: 172.4664 | NLL: 23.4956 | KL: 326.1139
+Epoch 0350 | Beta: 0.51 | Loss: 176.9030 | NLL: 21.9024 | KL: 304.2171
+Epoch 0400 | Beta: 0.56 | Loss: 182.6708 | NLL: 20.5494 | KL: 291.0124
+Epoch 0450 | Beta: 0.60 | Loss: 197.5264 | NLL: 21.6799 | KL: 293.0457
+Epoch 0500 | Beta: 0.64 | Loss: 195.0523 | NLL: 19.7650 | KL: 274.3722
+Epoch 0550 | Beta: 0.67 | Loss: 204.9143 | NLL: 20.8475 | KL: 273.1351
+Epoch 0600 | Beta: 0.71 | Loss: 205.2992 | NLL: 18.1905 | KL: 265.1985
+Epoch 0650 | Beta: 0.73 | Loss: 209.7072 | NLL: 19.1640 | KL: 259.5566
+Epoch 0700 | Beta: 0.76 | Loss: 234.4502 | NLL: 37.4670 | KL: 259.2202
+Epoch 0750 | Beta: 0.78 | Loss: 216.3135 | NLL: 21.4050 | KL: 248.8615
+Epoch 0800 | Beta: 0.80 | Loss: 226.1327 | NLL: 26.1943 | KL: 248.6071
+Epoch 0850 | Beta: 0.82 | Loss: 223.5571 | NLL: 26.3220 | KL: 239.5875
+Epoch 0900 | Beta: 0.84 | Loss: 229.7974 | NLL: 28.9099 | KL: 239.0441
+Epoch 0950 | Beta: 0.86 | Loss: 233.3118 | NLL: 26.8868 | KL: 241.1888
+Epoch 1000 | Beta: 0.87 | Loss: 231.5485 | NLL: 22.8440 | KL: 239.9320

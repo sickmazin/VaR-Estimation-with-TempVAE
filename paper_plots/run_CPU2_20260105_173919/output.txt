@@ -1,0 +1,33 @@
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_CPU2_20260105_173919
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_CPU2_20260105_173919
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 29
+latent_dim: 10
+hidden_dim: 28
+batch_size: 140
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.01
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_CPU2_20260105_173919
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.2
+free_bits: 2.0
+gradient_clip: 4.5
+annealing_decay_rate: 0.96
+annealing_steps: 20
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...

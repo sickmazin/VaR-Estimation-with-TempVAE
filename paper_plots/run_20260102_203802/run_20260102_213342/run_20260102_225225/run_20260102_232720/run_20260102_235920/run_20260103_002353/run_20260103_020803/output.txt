@@ -1,0 +1,41 @@
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260102_203802\run_20260102_213342\run_20260102_225225\run_20260102_232720\run_20260102_235920\run_20260103_002353\run_20260103_020803
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 21
+latent_dim: 10
+hidden_dim: 18
+batch_size: 220
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.0005
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260102_203802\run_20260102_213342\run_20260102_225225\run_20260102_232720\run_20260102_235920\run_20260103_002353\run_20260103_020803
+device: cuda
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 122.2245 | NLL: 118.5800 | KL: 40.4941
+Epoch 0020 | Beta: 0.19 | Loss: 118.2675 | NLL: 112.5759 | KL: 29.9561
+Epoch 0030 | Beta: 0.29 | Loss: 118.0353 | NLL: 109.7591 | KL: 28.5388
+Epoch 0040 | Beta: 0.39 | Loss: 113.3518 | NLL: 101.6671 | KL: 29.9608
+Epoch 0050 | Beta: 0.49 | Loss: 112.7769 | NLL: 98.7424 | KL: 28.6418
+Epoch 0060 | Beta: 0.59 | Loss: 113.6637 | NLL: 97.4668 | KL: 27.4524
+Epoch 0070 | Beta: 0.69 | Loss: 114.9831 | NLL: 96.6511 | KL: 26.5682
+Epoch 0080 | Beta: 0.79 | Loss: 116.7432 | NLL: 96.1910 | KL: 26.0155
+Epoch 0090 | Beta: 0.89 | Loss: 118.2977 | NLL: 95.8039 | KL: 25.2740
+Epoch 0100 | Beta: 0.99 | Loss: 120.0126 | NLL: 95.4702 | KL: 24.7903
+Epoch 0110 | Beta: 1.00 | Loss: 119.7053 | NLL: 94.9949 | KL: 24.7104
+Epoch 0120 | Beta: 1.00 | Loss: 119.0603 | NLL: 94.5964 | KL: 24.4639

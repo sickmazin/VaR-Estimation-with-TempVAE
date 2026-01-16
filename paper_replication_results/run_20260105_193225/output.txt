@@ -1,0 +1,163 @@
+>>> TEMP VAE: PAPER EXACT REPLICATION PIPELINE (UPDATED)
+>>> Log salvati in: paper_replication_results\run_20260105_193225
+
+CONFIGURAZIONE:
+tickers: ['ALV.DE', 'BAS.DE', 'BMW.DE', 'DBK.DE', 'DTE.DE', 'EOAN.DE', 'IFX.DE', 'MUV2.DE', 'RWE.DE', 'SAP.DE', 'SIE.DE', 'SPY', '^VIX', 'GLD']
+start_date: 2018-10-01
+end_date: 2021-07-01
+seq_length: 21
+train_split: 0.66
+latent_dim: 10
+hidden_dim: 16
+dropout_rate: 0.1
+batch_size: 256
+epochs: 1000
+learning_rate: 0.001
+lr_decay_rate: 0.96
+lr_decay_steps: 500
+l2_reg: 0.01
+annealing_decay_rate: 0.96
+annealing_steps: 20
+device: cpu
+seed: 42
+plot_dir: paper_replication_results\run_20260105_193225
+--------------------------------------------------
+
+>>> Scaricamento dati da YFinance (14 tickers)...
+Ticker rimossi per dati insufficienti: []
+First 5 rows of cleaned data:
+ Ticker          ALV.DE     BAS.DE     BMW.DE  ...     SIE.DE         SPY   ^VIX
+Date                                          ...                              
+2018-10-01  136.490448  50.339088  52.579903  ...  80.134766  260.839508  12.00
+2018-10-02  135.798950  50.096035  52.956718  ...  78.014114  260.687469  12.05
+2018-10-03  135.798950  50.096035  52.956718  ...  78.014114  260.830475  11.61
+2018-10-04  137.294830  49.491673  52.660652  ...  77.694550  258.792053  14.22
+2018-10-05  136.208206  49.064678  52.270374  ...  76.547073  257.343353  14.82
+
+[5 rows x 14 columns]
+Dataset shape post-cleaning: (709, 14)
+Assets mantenuti (14): ['ALV.DE', 'BAS.DE', 'BMW.DE', 'DBK.DE', 'DTE.DE', 'EOAN.DE', 'GLD', 'IFX.DE', 'MUV2.DE', 'RWE.DE', 'SAP.DE', 'SIE.DE', 'SPY', '^VIX']
+Train samples: 467 | Test samples: 241
+
+>>> Inizializzazione Training (Paper Config)...
+Epoch 0010 | Beta: 0.0182 | Loss: 413.7693 | NLL: 405.2290 | KL: 469.1876 | LR: 0.001000
+Epoch 0020 | Beta: 0.0380 | Loss: 436.4014 | NLL: 422.0101 | KL: 378.3340 | LR: 0.001000
+Epoch 0030 | Beta: 0.0575 | Loss: 423.8249 | NLL: 409.3211 | KL: 252.3537 | LR: 0.001000
+Epoch 0040 | Beta: 0.0765 | Loss: 409.2789 | NLL: 393.9035 | KL: 200.9414 | LR: 0.001000
+Epoch 0050 | Beta: 0.0952 | Loss: 396.7011 | NLL: 380.3818 | KL: 171.4661 | LR: 0.001000
+Epoch 0060 | Beta: 0.1135 | Loss: 376.7513 | NLL: 360.0652 | KL: 147.0707 | LR: 0.001000
+Epoch 0070 | Beta: 0.1314 | Loss: 358.5272 | NLL: 341.7275 | KL: 127.8828 | LR: 0.001000
+Epoch 0080 | Beta: 0.1489 | Loss: 351.7494 | NLL: 333.7984 | KL: 120.5427 | LR: 0.001000
+Epoch 0090 | Beta: 0.1661 | Loss: 344.2069 | NLL: 325.0120 | KL: 115.5531 | LR: 0.001000
+Epoch 0100 | Beta: 0.1830 | Loss: 343.4640 | NLL: 323.5357 | KL: 108.9204 | LR: 0.001000
+Epoch 0110 | Beta: 0.1995 | Loss: 334.5423 | NLL: 313.0946 | KL: 107.5242 | LR: 0.001000
+Epoch 0120 | Beta: 0.2156 | Loss: 329.6804 | NLL: 307.6401 | KL: 102.2073 | LR: 0.001000
+Epoch 0130 | Beta: 0.2315 | Loss: 341.8700 | NLL: 317.9025 | KL: 103.5359 | LR: 0.001000
+Epoch 0140 | Beta: 0.2470 | Loss: 343.3054 | NLL: 318.9807 | KL: 98.4736 | LR: 0.001000
+Epoch 0150 | Beta: 0.2622 | Loss: 332.6670 | NLL: 308.3308 | KL: 92.8044 | LR: 0.001000
+Epoch 0160 | Beta: 0.2771 | Loss: 331.7128 | NLL: 304.2010 | KL: 99.2715 | LR: 0.001000
+Epoch 0170 | Beta: 0.2917 | Loss: 327.1123 | NLL: 298.8622 | KL: 96.8325 | LR: 0.001000
+Epoch 0180 | Beta: 0.3061 | Loss: 330.1633 | NLL: 300.5130 | KL: 96.8803 | LR: 0.001000
+Epoch 0190 | Beta: 0.3201 | Loss: 316.5404 | NLL: 286.7264 | KL: 93.1481 | LR: 0.001000
+Epoch 0200 | Beta: 0.3338 | Loss: 311.4256 | NLL: 280.9964 | KL: 91.1573 | LR: 0.001000
+Epoch 0210 | Beta: 0.3473 | Loss: 304.0140 | NLL: 273.3329 | KL: 88.3497 | LR: 0.001000
+Epoch 0220 | Beta: 0.3605 | Loss: 308.8950 | NLL: 277.2250 | KL: 87.8606 | LR: 0.001000
+Epoch 0230 | Beta: 0.3734 | Loss: 308.0825 | NLL: 274.4281 | KL: 90.1350 | LR: 0.001000
+Epoch 0240 | Beta: 0.3860 | Loss: 308.6376 | NLL: 275.9064 | KL: 84.7875 | LR: 0.001000
+Epoch 0250 | Beta: 0.3984 | Loss: 305.3504 | NLL: 272.0468 | KL: 83.5845 | LR: 0.001000
+Epoch 0260 | Beta: 0.4106 | Loss: 306.0340 | NLL: 271.7685 | KL: 83.4528 | LR: 0.001000
+Epoch 0270 | Beta: 0.4225 | Loss: 305.6498 | NLL: 270.5713 | KL: 83.0251 | LR: 0.001000
+Epoch 0280 | Beta: 0.4342 | Loss: 306.1584 | NLL: 270.7946 | KL: 81.4508 | LR: 0.001000
+Epoch 0290 | Beta: 0.4456 | Loss: 312.9680 | NLL: 275.7948 | KL: 83.4218 | LR: 0.001000
+Epoch 0300 | Beta: 0.4568 | Loss: 305.3061 | NLL: 268.2966 | KL: 81.0181 | LR: 0.001000
+Epoch 0310 | Beta: 0.4678 | Loss: 308.9158 | NLL: 270.6421 | KL: 81.8199 | LR: 0.001000
+Epoch 0320 | Beta: 0.4785 | Loss: 306.3429 | NLL: 267.7878 | KL: 80.5692 | LR: 0.001000
+Epoch 0330 | Beta: 0.4891 | Loss: 310.0981 | NLL: 271.5254 | KL: 78.8696 | LR: 0.001000
+Epoch 0340 | Beta: 0.4994 | Loss: 305.9238 | NLL: 265.7806 | KL: 80.3841 | LR: 0.001000
+Epoch 0350 | Beta: 0.5095 | Loss: 305.0240 | NLL: 265.0122 | KL: 78.5303 | LR: 0.001000
+Epoch 0360 | Beta: 0.5194 | Loss: 307.8024 | NLL: 267.1978 | KL: 78.1734 | LR: 0.001000
+Epoch 0370 | Beta: 0.5291 | Loss: 306.9627 | NLL: 265.9028 | KL: 77.5994 | LR: 0.001000
+Epoch 0380 | Beta: 0.5386 | Loss: 308.8236 | NLL: 267.4832 | KL: 76.7495 | LR: 0.001000
+Epoch 0390 | Beta: 0.5480 | Loss: 310.8098 | NLL: 269.2119 | KL: 75.9139 | LR: 0.001000
+Epoch 0400 | Beta: 0.5571 | Loss: 307.2028 | NLL: 264.3667 | KL: 76.8920 | LR: 0.001000
+Epoch 0410 | Beta: 0.5660 | Loss: 308.1552 | NLL: 265.4037 | KL: 75.5268 | LR: 0.001000
+Epoch 0420 | Beta: 0.5748 | Loss: 310.5421 | NLL: 267.2422 | KL: 75.3290 | LR: 0.001000
+Epoch 0430 | Beta: 0.5834 | Loss: 311.4702 | NLL: 267.8948 | KL: 74.6919 | LR: 0.001000
+Epoch 0440 | Beta: 0.5918 | Loss: 310.7755 | NLL: 267.4494 | KL: 73.2084 | LR: 0.001000
+Epoch 0450 | Beta: 0.6001 | Loss: 309.6095 | NLL: 266.2723 | KL: 72.2207 | LR: 0.001000
+Epoch 0460 | Beta: 0.6081 | Loss: 308.2999 | NLL: 263.8888 | KL: 73.0271 | LR: 0.001000
+Epoch 0470 | Beta: 0.6161 | Loss: 316.9957 | NLL: 271.1311 | KL: 74.4479 | LR: 0.001000
+Epoch 0480 | Beta: 0.6238 | Loss: 316.7697 | NLL: 270.2754 | KL: 74.5317 | LR: 0.001000
+Epoch 0490 | Beta: 0.6314 | Loss: 312.9561 | NLL: 267.4324 | KL: 72.0973 | LR: 0.001000
+Epoch 0500 | Beta: 0.6389 | Loss: 319.3984 | NLL: 271.9384 | KL: 74.2879 | LR: 0.000960
+Epoch 0510 | Beta: 0.6462 | Loss: 309.4814 | NLL: 262.8604 | KL: 72.1505 | LR: 0.000960
+Epoch 0520 | Beta: 0.6533 | Loss: 312.5377 | NLL: 264.7631 | KL: 73.1268 | LR: 0.000960
+Epoch 0530 | Beta: 0.6603 | Loss: 308.4432 | NLL: 261.3030 | KL: 71.3903 | LR: 0.000960
+Epoch 0540 | Beta: 0.6672 | Loss: 311.4460 | NLL: 263.5465 | KL: 71.7939 | LR: 0.000960
+Epoch 0550 | Beta: 0.6739 | Loss: 313.6302 | NLL: 266.3715 | KL: 70.1268 | LR: 0.000960
+Epoch 0560 | Beta: 0.6805 | Loss: 313.2859 | NLL: 264.8717 | KL: 71.1459 | LR: 0.000960
+Epoch 0570 | Beta: 0.6869 | Loss: 312.5038 | NLL: 263.5990 | KL: 71.1915 | LR: 0.000960
+Epoch 0580 | Beta: 0.6933 | Loss: 308.9324 | NLL: 260.2630 | KL: 70.2024 | LR: 0.000960
+Epoch 0590 | Beta: 0.6995 | Loss: 312.2621 | NLL: 263.7178 | KL: 69.4015 | LR: 0.000960
+Epoch 0600 | Beta: 0.7055 | Loss: 313.9869 | NLL: 264.0670 | KL: 70.7539 | LR: 0.000960
+Epoch 0610 | Beta: 0.7115 | Loss: 311.8088 | NLL: 262.7855 | KL: 68.9022 | LR: 0.000960
+Epoch 0620 | Beta: 0.7173 | Loss: 310.2520 | NLL: 260.4085 | KL: 69.4857 | LR: 0.000960
+Epoch 0630 | Beta: 0.7230 | Loss: 311.6769 | NLL: 262.1148 | KL: 68.5477 | LR: 0.000960
+Epoch 0640 | Beta: 0.7286 | Loss: 317.7366 | NLL: 265.1987 | KL: 72.1053 | LR: 0.000960
+Epoch 0650 | Beta: 0.7341 | Loss: 318.9052 | NLL: 267.8804 | KL: 69.5055 | LR: 0.000960
+Epoch 0660 | Beta: 0.7395 | Loss: 316.1698 | NLL: 264.5187 | KL: 69.8476 | LR: 0.000960
+Epoch 0670 | Beta: 0.7447 | Loss: 315.7773 | NLL: 264.0341 | KL: 69.4777 | LR: 0.000960
+Epoch 0680 | Beta: 0.7499 | Loss: 313.4579 | NLL: 262.4496 | KL: 68.0199 | LR: 0.000960
+Epoch 0690 | Beta: 0.7550 | Loss: 315.0378 | NLL: 262.1809 | KL: 70.0132 | LR: 0.000960
+Epoch 0700 | Beta: 0.7599 | Loss: 314.4094 | NLL: 263.0679 | KL: 67.5630 | LR: 0.000960
+Epoch 0710 | Beta: 0.7648 | Loss: 313.3777 | NLL: 260.7060 | KL: 68.8737 | LR: 0.000960
+Epoch 0720 | Beta: 0.7695 | Loss: 314.2046 | NLL: 262.5456 | KL: 67.1323 | LR: 0.000960
+Epoch 0730 | Beta: 0.7742 | Loss: 311.8361 | NLL: 260.2119 | KL: 66.6835 | LR: 0.000960
+Epoch 0740 | Beta: 0.7787 | Loss: 319.1740 | NLL: 266.1490 | KL: 68.0916 | LR: 0.000960
+Epoch 0750 | Beta: 0.7832 | Loss: 314.9294 | NLL: 261.9034 | KL: 67.7042 | LR: 0.000960
+Epoch 0760 | Beta: 0.7876 | Loss: 309.9368 | NLL: 256.3470 | KL: 68.0435 | LR: 0.000960
+Epoch 0770 | Beta: 0.7919 | Loss: 321.1746 | NLL: 268.0966 | KL: 67.0285 | LR: 0.000960
+Epoch 0780 | Beta: 0.7961 | Loss: 320.0429 | NLL: 266.3368 | KL: 67.4633 | LR: 0.000960
+Epoch 0790 | Beta: 0.8002 | Loss: 315.0342 | NLL: 260.2905 | KL: 68.4127 | LR: 0.000960
+Epoch 0800 | Beta: 0.8042 | Loss: 315.0016 | NLL: 261.0568 | KL: 67.0759 | LR: 0.000960
+Epoch 0810 | Beta: 0.8082 | Loss: 317.8413 | NLL: 264.7646 | KL: 65.6735 | LR: 0.000960
+Epoch 0820 | Beta: 0.8121 | Loss: 320.8433 | NLL: 265.4767 | KL: 68.1801 | LR: 0.000960
+Epoch 0830 | Beta: 0.8159 | Loss: 318.0612 | NLL: 263.4141 | KL: 66.9808 | LR: 0.000960
+Epoch 0840 | Beta: 0.8196 | Loss: 318.2077 | NLL: 263.3443 | KL: 66.9407 | LR: 0.000960
+Epoch 0850 | Beta: 0.8232 | Loss: 312.1974 | NLL: 257.0262 | KL: 67.0182 | LR: 0.000960
+Epoch 0860 | Beta: 0.8268 | Loss: 314.3787 | NLL: 260.4615 | KL: 65.2120 | LR: 0.000960
+Epoch 0870 | Beta: 0.8303 | Loss: 317.3804 | NLL: 262.5090 | KL: 66.0863 | LR: 0.000960
+Epoch 0880 | Beta: 0.8337 | Loss: 313.7186 | NLL: 258.8164 | KL: 65.8515 | LR: 0.000960
+Epoch 0890 | Beta: 0.8371 | Loss: 317.4754 | NLL: 261.7926 | KL: 66.5197 | LR: 0.000960
+Epoch 0900 | Beta: 0.8404 | Loss: 324.6487 | NLL: 268.4232 | KL: 66.9050 | LR: 0.000960
+Epoch 0910 | Beta: 0.8436 | Loss: 319.5711 | NLL: 263.4679 | KL: 66.5043 | LR: 0.000960
+Epoch 0920 | Beta: 0.8468 | Loss: 314.7742 | NLL: 257.7523 | KL: 67.3410 | LR: 0.000960
+Epoch 0930 | Beta: 0.8499 | Loss: 317.8553 | NLL: 260.7470 | KL: 67.1973 | LR: 0.000960
+Epoch 0940 | Beta: 0.8529 | Loss: 315.7484 | NLL: 260.3548 | KL: 64.9479 | LR: 0.000960
+Epoch 0950 | Beta: 0.8559 | Loss: 319.3826 | NLL: 263.0958 | KL: 65.7661 | LR: 0.000960
+Epoch 0960 | Beta: 0.8588 | Loss: 323.3969 | NLL: 267.2088 | KL: 65.4280 | LR: 0.000960
+Epoch 0970 | Beta: 0.8616 | Loss: 319.0253 | NLL: 262.9308 | KL: 65.1028 | LR: 0.000960
+Epoch 0980 | Beta: 0.8644 | Loss: 324.9064 | NLL: 267.2051 | KL: 66.7509 | LR: 0.000960
+Epoch 0990 | Beta: 0.8672 | Loss: 317.8078 | NLL: 261.5324 | KL: 64.8959 | LR: 0.000960
+Epoch 1000 | Beta: 0.8698 | Loss: 317.0716 | NLL: 259.9657 | KL: 65.6503 | LR: 0.000922
+
+>>> Avvio Valutazione...
+
+=== RISULTATI TEST STATISTICI ===
+
+--- Kupiec POF Test ---
+Totale Giorni: 221
+Violazioni Attese: 11.1
+Violazioni Osservate: 20
+Frequenza Osservata: 0.0905 (Target: 0.0500)
+LR Statistic: 6.2191 | P-Value: 0.0126
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=183, n01=18, n10=17, n11=2
+LR Independence: 0.0498 (p-value: 0.8234)
+LR Conditional Coverage (CC): 6.2689 | P-Value CC: 0.0435
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots/var_regimes_plot.png'
+
+>>> REPLICATION COMPLETE.

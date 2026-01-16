@@ -1,0 +1,1057 @@
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_093058
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_093058
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 10
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_093058
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 167.7944 | NLL: 160.3011 | KL: 83.2585
+Epoch 0020 | Beta: 0.19 | Loss: 162.9495 | NLL: 147.1913 | KL: 82.9383
+Epoch 0030 | Beta: 0.29 | Loss: 158.5478 | NLL: 135.3656 | KL: 79.9386
+Epoch 0040 | Beta: 0.39 | Loss: 158.9016 | NLL: 126.7906 | KL: 82.3359
+Epoch 0050 | Beta: 0.49 | Loss: 158.3696 | NLL: 114.6201 | KL: 89.2846
+Epoch 0060 | Beta: 0.59 | Loss: 158.9314 | NLL: 104.1930 | KL: 92.7768
+Epoch 0070 | Beta: 0.69 | Loss: 160.4847 | NLL: 95.1742 | KL: 94.6528
+Epoch 0080 | Beta: 0.79 | Loss: 163.3108 | NLL: 88.2817 | KL: 94.9736
+Epoch 0090 | Beta: 0.89 | Loss: 167.6949 | NLL: 82.3578 | KL: 95.8843
+Epoch 0100 | Beta: 0.99 | Loss: 174.5701 | NLL: 81.3567 | KL: 94.1549
+Epoch 0110 | Beta: 1.00 | Loss: 170.8379 | NLL: 76.9726 | KL: 93.8653
+Epoch 0120 | Beta: 1.00 | Loss: 169.7434 | NLL: 74.3204 | KL: 95.4231
+Epoch 0130 | Beta: 1.00 | Loss: 170.7514 | NLL: 75.6926 | KL: 95.0588
+Epoch 0140 | Beta: 1.00 | Loss: 161.4767 | NLL: 66.0307 | KL: 95.4460
+Epoch 0150 | Beta: 1.00 | Loss: 162.1890 | NLL: 66.1889 | KL: 96.0001
+Epoch 0160 | Beta: 1.00 | Loss: 158.4798 | NLL: 62.1210 | KL: 96.3588
+Epoch 0170 | Beta: 1.00 | Loss: 172.9973 | NLL: 77.1141 | KL: 95.8832
+Epoch 0180 | Beta: 1.00 | Loss: 155.3873 | NLL: 59.0399 | KL: 96.3474
+Epoch 0190 | Beta: 1.00 | Loss: 158.3773 | NLL: 62.2719 | KL: 96.1054
+Epoch 0200 | Beta: 1.00 | Loss: 154.7881 | NLL: 59.8576 | KL: 94.9305
+Epoch 0210 | Beta: 1.00 | Loss: 150.3374 | NLL: 54.8379 | KL: 95.4995
+Epoch 0220 | Beta: 1.00 | Loss: 150.8869 | NLL: 56.5681 | KL: 94.3188
+Epoch 0230 | Beta: 1.00 | Loss: 152.3185 | NLL: 57.6020 | KL: 94.7165
+Epoch 0240 | Beta: 1.00 | Loss: 149.9446 | NLL: 54.5468 | KL: 95.3978
+Epoch 0250 | Beta: 1.00 | Loss: 151.8514 | NLL: 55.3281 | KL: 96.5234
+Epoch 0260 | Beta: 1.00 | Loss: 148.1289 | NLL: 52.9458 | KL: 95.1831
+Epoch 0270 | Beta: 1.00 | Loss: 149.9842 | NLL: 54.3055 | KL: 95.6787
+Epoch 0280 | Beta: 1.00 | Loss: 144.0226 | NLL: 49.6492 | KL: 94.3734
+Epoch 0290 | Beta: 1.00 | Loss: 142.2442 | NLL: 47.9411 | KL: 94.3032
+Epoch 0300 | Beta: 1.00 | Loss: 143.1195 | NLL: 47.7317 | KL: 95.3878
+Epoch 0310 | Beta: 1.00 | Loss: 141.8648 | NLL: 47.1327 | KL: 94.7320
+Epoch 0320 | Beta: 1.00 | Loss: 144.0724 | NLL: 48.6206 | KL: 95.4518
+Epoch 0330 | Beta: 1.00 | Loss: 139.4718 | NLL: 44.0851 | KL: 95.3868
+Epoch 0340 | Beta: 1.00 | Loss: 138.0619 | NLL: 43.7788 | KL: 94.2831
+Epoch 0350 | Beta: 1.00 | Loss: 138.7475 | NLL: 44.6527 | KL: 94.0948
+Epoch 0360 | Beta: 1.00 | Loss: 146.3254 | NLL: 51.7878 | KL: 94.5376
+Epoch 0370 | Beta: 1.00 | Loss: 138.0494 | NLL: 43.9470 | KL: 94.1024
+Epoch 0380 | Beta: 1.00 | Loss: 139.7085 | NLL: 44.6645 | KL: 95.0440
+Epoch 0390 | Beta: 1.00 | Loss: 139.8303 | NLL: 44.2341 | KL: 95.5962
+Epoch 0400 | Beta: 1.00 | Loss: 135.8958 | NLL: 41.2287 | KL: 94.6671
+Epoch 0410 | Beta: 1.00 | Loss: 136.7508 | NLL: 42.6026 | KL: 94.1481
+Epoch 0420 | Beta: 1.00 | Loss: 134.8477 | NLL: 39.7676 | KL: 95.0801
+Epoch 0430 | Beta: 1.00 | Loss: 134.2391 | NLL: 40.0905 | KL: 94.1486
+Epoch 0440 | Beta: 1.00 | Loss: 141.4456 | NLL: 46.2002 | KL: 95.2454
+Epoch 0450 | Beta: 1.00 | Loss: 135.1748 | NLL: 41.0006 | KL: 94.1741
+Epoch 0460 | Beta: 1.00 | Loss: 135.8626 | NLL: 41.4445 | KL: 94.4182
+Epoch 0470 | Beta: 1.00 | Loss: 135.2747 | NLL: 40.9424 | KL: 94.3323
+Epoch 0480 | Beta: 1.00 | Loss: 136.1702 | NLL: 39.9598 | KL: 96.2104
+Epoch 0490 | Beta: 1.00 | Loss: 136.8218 | NLL: 43.4954 | KL: 93.3263
+Epoch 0500 | Beta: 1.00 | Loss: 131.3377 | NLL: 37.3747 | KL: 93.9630
+Epoch 0510 | Beta: 1.00 | Loss: 130.0796 | NLL: 35.8200 | KL: 94.2597
+Epoch 0520 | Beta: 1.00 | Loss: 132.6914 | NLL: 38.4851 | KL: 94.2062
+Epoch 0530 | Beta: 1.00 | Loss: 133.1939 | NLL: 39.6566 | KL: 93.5373
+Epoch 0540 | Beta: 1.00 | Loss: 132.3649 | NLL: 36.9534 | KL: 95.4116
+Epoch 0550 | Beta: 1.00 | Loss: 134.7182 | NLL: 40.8831 | KL: 93.8350
+Epoch 0560 | Beta: 1.00 | Loss: 132.8416 | NLL: 38.4931 | KL: 94.3485
+Epoch 0570 | Beta: 1.00 | Loss: 130.7164 | NLL: 36.1532 | KL: 94.5632
+Epoch 0580 | Beta: 1.00 | Loss: 132.0705 | NLL: 37.9494 | KL: 94.1211
+Epoch 0590 | Beta: 1.00 | Loss: 129.9084 | NLL: 35.7407 | KL: 94.1677
+Epoch 0600 | Beta: 1.00 | Loss: 130.4232 | NLL: 37.8241 | KL: 92.5991
+Epoch 0610 | Beta: 1.00 | Loss: 130.7009 | NLL: 37.7391 | KL: 92.9617
+Epoch 0620 | Beta: 1.00 | Loss: 129.7416 | NLL: 36.8667 | KL: 92.8749
+Epoch 0630 | Beta: 1.00 | Loss: 129.6067 | NLL: 33.5872 | KL: 96.0196
+Epoch 0640 | Beta: 1.00 | Loss: 126.8922 | NLL: 34.8632 | KL: 92.0290
+Epoch 0650 | Beta: 1.00 | Loss: 130.7507 | NLL: 37.3715 | KL: 93.3792
+Epoch 0660 | Beta: 1.00 | Loss: 130.5329 | NLL: 38.0413 | KL: 92.4916
+Epoch 0670 | Beta: 1.00 | Loss: 130.2244 | NLL: 35.5326 | KL: 94.6919
+Epoch 0680 | Beta: 1.00 | Loss: 128.7494 | NLL: 36.7928 | KL: 91.9566
+Epoch 0690 | Beta: 1.00 | Loss: 134.1181 | NLL: 41.9007 | KL: 92.2174
+Epoch 0700 | Beta: 1.00 | Loss: 126.2626 | NLL: 33.8516 | KL: 92.4110
+Epoch 0710 | Beta: 1.00 | Loss: 129.5452 | NLL: 37.6598 | KL: 91.8854
+Epoch 0720 | Beta: 1.00 | Loss: 129.7137 | NLL: 37.8379 | KL: 91.8758
+Epoch 0730 | Beta: 1.00 | Loss: 131.6146 | NLL: 36.5414 | KL: 95.0732
+Epoch 0740 | Beta: 1.00 | Loss: 128.1635 | NLL: 35.4427 | KL: 92.7209
+Epoch 0750 | Beta: 1.00 | Loss: 128.1061 | NLL: 35.8135 | KL: 92.2925
+Epoch 0760 | Beta: 1.00 | Loss: 126.1454 | NLL: 34.4205 | KL: 91.7250
+Epoch 0770 | Beta: 1.00 | Loss: 125.3542 | NLL: 33.5897 | KL: 91.7645
+Epoch 0780 | Beta: 1.00 | Loss: 126.9854 | NLL: 34.9021 | KL: 92.0834
+Epoch 0790 | Beta: 1.00 | Loss: 125.9547 | NLL: 32.7806 | KL: 93.1741
+Epoch 0800 | Beta: 1.00 | Loss: 130.1745 | NLL: 37.9514 | KL: 92.2231
+Epoch 0810 | Beta: 1.00 | Loss: 133.4440 | NLL: 41.2837 | KL: 92.1604
+Epoch 0820 | Beta: 1.00 | Loss: 126.8069 | NLL: 33.8138 | KL: 92.9931
+Epoch 0830 | Beta: 1.00 | Loss: 125.7779 | NLL: 34.3337 | KL: 91.4442
+Epoch 0840 | Beta: 1.00 | Loss: 126.0755 | NLL: 34.2417 | KL: 91.8338
+Epoch 0850 | Beta: 1.00 | Loss: 126.7826 | NLL: 35.3586 | KL: 91.4240
+Epoch 0860 | Beta: 1.00 | Loss: 133.5535 | NLL: 41.8465 | KL: 91.7070
+Epoch 0870 | Beta: 1.00 | Loss: 129.5006 | NLL: 37.9624 | KL: 91.5381
+Epoch 0880 | Beta: 1.00 | Loss: 143.0626 | NLL: 52.6890 | KL: 90.3737
+Epoch 0890 | Beta: 1.00 | Loss: 135.9816 | NLL: 45.5470 | KL: 90.4346
+Epoch 0900 | Beta: 1.00 | Loss: 127.0386 | NLL: 34.9723 | KL: 92.0663
+Epoch 0910 | Beta: 1.00 | Loss: 136.1257 | NLL: 45.8309 | KL: 90.2948
+Epoch 0920 | Beta: 1.00 | Loss: 132.1010 | NLL: 39.5976 | KL: 92.5034
+Epoch 0930 | Beta: 1.00 | Loss: 126.9154 | NLL: 35.9896 | KL: 90.9259
+Epoch 0940 | Beta: 1.00 | Loss: 124.7510 | NLL: 32.2581 | KL: 92.4929
+Epoch 0950 | Beta: 1.00 | Loss: 142.6183 | NLL: 52.6425 | KL: 89.9758
+Epoch 0960 | Beta: 1.00 | Loss: 122.4836 | NLL: 33.1452 | KL: 89.3384
+Epoch 0970 | Beta: 1.00 | Loss: 124.5831 | NLL: 34.9936 | KL: 89.5895
+Epoch 0980 | Beta: 1.00 | Loss: 123.6455 | NLL: 34.0613 | KL: 89.5842
+Epoch 0990 | Beta: 1.00 | Loss: 123.7141 | NLL: 33.1747 | KL: 90.5394
+Epoch 1000 | Beta: 1.00 | Loss: 121.7393 | NLL: 31.5781 | KL: 90.1613
+Correlation Heatmap saved to paper_plots\run_20260103_093058/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 27
+Frequenza Osservata: 0.0246 (Target: 0.0500)
+LR Statistic: 18.2700 | P-Value: 0.0000
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1046, n01=25, n10=25, n11=2
+LR Independence: 1.8784 (p-value: 0.1705)
+LR Conditional Coverage (CC): 20.1483 | P-Value CC: 0.0000
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_20260103_093058/var_regimes_plot.png'
+
+>>> Analysis Complete.
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_100128
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_100128
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 11
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_100128
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 177.4750 | NLL: 167.3591 | KL: 112.3994
+Epoch 0020 | Beta: 0.19 | Loss: 176.6421 | NLL: 158.6541 | KL: 94.6739
+Epoch 0030 | Beta: 0.29 | Loss: 180.0597 | NLL: 153.8993 | KL: 90.2085
+Epoch 0040 | Beta: 0.39 | Loss: 176.2474 | NLL: 141.1641 | KL: 89.9571
+Epoch 0050 | Beta: 0.49 | Loss: 180.2151 | NLL: 137.9071 | KL: 86.3428
+Epoch 0060 | Beta: 0.59 | Loss: 185.5333 | NLL: 135.4300 | KL: 84.9209
+Epoch 0070 | Beta: 0.69 | Loss: 191.5206 | NLL: 132.5810 | KL: 85.4198
+Epoch 0080 | Beta: 0.79 | Loss: 197.0140 | NLL: 130.4382 | KL: 84.2732
+Epoch 0090 | Beta: 0.89 | Loss: 203.6619 | NLL: 128.2271 | KL: 84.7582
+Epoch 0100 | Beta: 0.99 | Loss: 209.9380 | NLL: 127.2455 | KL: 83.5277
+Epoch 0110 | Beta: 1.00 | Loss: 208.2941 | NLL: 124.8744 | KL: 83.4198
+Epoch 0120 | Beta: 1.00 | Loss: 205.4569 | NLL: 121.5148 | KL: 83.9422
+Epoch 0130 | Beta: 1.00 | Loss: 203.4271 | NLL: 116.7436 | KL: 86.6834
+Epoch 0140 | Beta: 1.00 | Loss: 200.5841 | NLL: 109.8678 | KL: 90.7163
+Epoch 0150 | Beta: 1.00 | Loss: 194.1260 | NLL: 100.9626 | KL: 93.1634
+Epoch 0160 | Beta: 1.00 | Loss: 189.5959 | NLL: 93.2131 | KL: 96.3828
+Epoch 0170 | Beta: 1.00 | Loss: 186.4577 | NLL: 87.7213 | KL: 98.7364
+Epoch 0180 | Beta: 1.00 | Loss: 180.7677 | NLL: 81.4307 | KL: 99.3369
+Epoch 0190 | Beta: 1.00 | Loss: 175.6237 | NLL: 76.1131 | KL: 99.5106
+Epoch 0200 | Beta: 1.00 | Loss: 173.4458 | NLL: 73.3868 | KL: 100.0590
+Epoch 0210 | Beta: 1.00 | Loss: 172.0358 | NLL: 71.3557 | KL: 100.6801
+Epoch 0220 | Beta: 1.00 | Loss: 169.1159 | NLL: 67.8603 | KL: 101.2556
+Epoch 0230 | Beta: 1.00 | Loss: 166.7856 | NLL: 64.9002 | KL: 101.8854
+Epoch 0240 | Beta: 1.00 | Loss: 167.2231 | NLL: 65.4207 | KL: 101.8024
+Epoch 0250 | Beta: 1.00 | Loss: 163.1069 | NLL: 61.3363 | KL: 101.7706
+Epoch 0260 | Beta: 1.00 | Loss: 162.3028 | NLL: 59.4778 | KL: 102.8250
+Epoch 0270 | Beta: 1.00 | Loss: 160.2725 | NLL: 58.0472 | KL: 102.2253
+Epoch 0280 | Beta: 1.00 | Loss: 157.1780 | NLL: 55.6233 | KL: 101.5547
+Epoch 0290 | Beta: 1.00 | Loss: 159.5152 | NLL: 55.5600 | KL: 103.9552
+Epoch 0300 | Beta: 1.00 | Loss: 161.2455 | NLL: 58.7918 | KL: 102.4537
+Epoch 0310 | Beta: 1.00 | Loss: 155.2327 | NLL: 52.6818 | KL: 102.5508
+Epoch 0320 | Beta: 1.00 | Loss: 152.1144 | NLL: 49.4274 | KL: 102.6871
+Epoch 0330 | Beta: 1.00 | Loss: 154.1349 | NLL: 52.4739 | KL: 101.6610
+Epoch 0340 | Beta: 1.00 | Loss: 151.1248 | NLL: 50.0399 | KL: 101.0849
+Epoch 0350 | Beta: 1.00 | Loss: 152.8482 | NLL: 49.7696 | KL: 103.0786
+Epoch 0360 | Beta: 1.00 | Loss: 151.0226 | NLL: 48.6722 | KL: 102.3504
+Epoch 0370 | Beta: 1.00 | Loss: 148.1716 | NLL: 46.2337 | KL: 101.9378
+Epoch 0380 | Beta: 1.00 | Loss: 152.6720 | NLL: 50.0288 | KL: 102.6432
+Epoch 0390 | Beta: 1.00 | Loss: 148.8224 | NLL: 45.6675 | KL: 103.1549
+Epoch 0400 | Beta: 1.00 | Loss: 148.2420 | NLL: 45.3101 | KL: 102.9319
+Epoch 0410 | Beta: 1.00 | Loss: 152.4426 | NLL: 50.3208 | KL: 102.1217
+Epoch 0420 | Beta: 1.00 | Loss: 146.5373 | NLL: 43.4806 | KL: 103.0567
+Epoch 0430 | Beta: 1.00 | Loss: 146.3086 | NLL: 44.9645 | KL: 101.3441
+Epoch 0440 | Beta: 1.00 | Loss: 158.2969 | NLL: 55.4519 | KL: 102.8451
+Epoch 0450 | Beta: 1.00 | Loss: 150.4329 | NLL: 47.4209 | KL: 103.0120
+Epoch 0460 | Beta: 1.00 | Loss: 144.3156 | NLL: 41.9688 | KL: 102.3468
+Epoch 0470 | Beta: 1.00 | Loss: 143.9580 | NLL: 41.8309 | KL: 102.1271
+Epoch 0480 | Beta: 1.00 | Loss: 148.6094 | NLL: 43.3818 | KL: 105.2277
+Epoch 0490 | Beta: 1.00 | Loss: 142.6904 | NLL: 41.0581 | KL: 101.6323
+Epoch 0500 | Beta: 1.00 | Loss: 141.9216 | NLL: 39.6385 | KL: 102.2832
+Epoch 0510 | Beta: 1.00 | Loss: 158.6732 | NLL: 57.4733 | KL: 101.1999
+Epoch 0520 | Beta: 1.00 | Loss: 153.7081 | NLL: 51.6215 | KL: 102.0866
+Epoch 0530 | Beta: 1.00 | Loss: 140.9140 | NLL: 38.0280 | KL: 102.8859
+Epoch 0540 | Beta: 1.00 | Loss: 142.8562 | NLL: 42.6463 | KL: 100.2099
+Epoch 0550 | Beta: 1.00 | Loss: 140.0340 | NLL: 39.7167 | KL: 100.3173
+Epoch 0560 | Beta: 1.00 | Loss: 141.0889 | NLL: 40.9727 | KL: 100.1163
+Epoch 0570 | Beta: 1.00 | Loss: 138.9471 | NLL: 37.8744 | KL: 101.0726
+Epoch 0580 | Beta: 1.00 | Loss: 138.9729 | NLL: 37.2320 | KL: 101.7409
+Epoch 0590 | Beta: 1.00 | Loss: 137.3949 | NLL: 37.0121 | KL: 100.3829
+Epoch 0600 | Beta: 1.00 | Loss: 137.9494 | NLL: 35.4953 | KL: 102.4542
+Epoch 0610 | Beta: 1.00 | Loss: 138.7374 | NLL: 37.0180 | KL: 101.7195
+Epoch 0620 | Beta: 1.00 | Loss: 141.3121 | NLL: 36.5751 | KL: 104.7371
+Epoch 0630 | Beta: 1.00 | Loss: 136.9260 | NLL: 35.7391 | KL: 101.1869
+Epoch 0640 | Beta: 1.00 | Loss: 141.4864 | NLL: 37.5758 | KL: 103.9107
+Epoch 0650 | Beta: 1.00 | Loss: 138.0932 | NLL: 34.9938 | KL: 103.0994
+Epoch 0660 | Beta: 1.00 | Loss: 137.9402 | NLL: 35.3961 | KL: 102.5441
+Epoch 0670 | Beta: 1.00 | Loss: 155.2974 | NLL: 54.0905 | KL: 101.2069
+Epoch 0680 | Beta: 1.00 | Loss: 138.6270 | NLL: 36.2242 | KL: 102.4028
+Epoch 0690 | Beta: 1.00 | Loss: 139.4557 | NLL: 36.6579 | KL: 102.7978
+Epoch 0700 | Beta: 1.00 | Loss: 145.4609 | NLL: 44.2694 | KL: 101.1915
+Epoch 0710 | Beta: 1.00 | Loss: 136.9989 | NLL: 34.5705 | KL: 102.4284
+Epoch 0720 | Beta: 1.00 | Loss: 135.4551 | NLL: 34.1771 | KL: 101.2780
+Epoch 0730 | Beta: 1.00 | Loss: 136.5985 | NLL: 35.1612 | KL: 101.4373
+Epoch 0740 | Beta: 1.00 | Loss: 138.9021 | NLL: 37.2367 | KL: 101.6653
+Epoch 0750 | Beta: 1.00 | Loss: 134.3189 | NLL: 34.2770 | KL: 100.0419
+Epoch 0760 | Beta: 1.00 | Loss: 136.8174 | NLL: 36.0494 | KL: 100.7680
+Epoch 0770 | Beta: 1.00 | Loss: 136.6357 | NLL: 35.2466 | KL: 101.3892
+Epoch 0780 | Beta: 1.00 | Loss: 136.6363 | NLL: 37.0699 | KL: 99.5664
+Epoch 0790 | Beta: 1.00 | Loss: 143.3134 | NLL: 41.1313 | KL: 102.1820
+Epoch 0800 | Beta: 1.00 | Loss: 135.4685 | NLL: 34.5917 | KL: 100.8768
+Epoch 0810 | Beta: 1.00 | Loss: 136.4857 | NLL: 34.4152 | KL: 102.0704
+Epoch 0820 | Beta: 1.00 | Loss: 137.2277 | NLL: 33.8408 | KL: 103.3870
+Epoch 0830 | Beta: 1.00 | Loss: 147.8556 | NLL: 48.8596 | KL: 98.9960
+Epoch 0840 | Beta: 1.00 | Loss: 135.7721 | NLL: 36.2476 | KL: 99.5244
+Epoch 0850 | Beta: 1.00 | Loss: 134.6456 | NLL: 34.0627 | KL: 100.5829
+Epoch 0860 | Beta: 1.00 | Loss: 135.7744 | NLL: 35.4352 | KL: 100.3392
+Epoch 0870 | Beta: 1.00 | Loss: 132.4947 | NLL: 33.3498 | KL: 99.1449
+Epoch 0880 | Beta: 1.00 | Loss: 136.0380 | NLL: 36.8309 | KL: 99.2071
+Epoch 0890 | Beta: 1.00 | Loss: 135.4096 | NLL: 34.8290 | KL: 100.5805
+Epoch 0900 | Beta: 1.00 | Loss: 135.0026 | NLL: 34.7376 | KL: 100.2650
+Epoch 0910 | Beta: 1.00 | Loss: 136.3697 | NLL: 36.6910 | KL: 99.6787
+Epoch 0920 | Beta: 1.00 | Loss: 133.5712 | NLL: 35.0777 | KL: 98.4935
+Epoch 0930 | Beta: 1.00 | Loss: 138.6930 | NLL: 36.4014 | KL: 102.2916
+Epoch 0940 | Beta: 1.00 | Loss: 134.7925 | NLL: 34.4747 | KL: 100.3177
+Epoch 0950 | Beta: 1.00 | Loss: 135.0331 | NLL: 33.7404 | KL: 101.2927
+Epoch 0960 | Beta: 1.00 | Loss: 134.1309 | NLL: 35.0893 | KL: 99.0416
+Epoch 0970 | Beta: 1.00 | Loss: 133.8171 | NLL: 34.1385 | KL: 99.6787
+Epoch 0980 | Beta: 1.00 | Loss: 130.8306 | NLL: 31.1233 | KL: 99.7073
+Epoch 0990 | Beta: 1.00 | Loss: 134.1553 | NLL: 33.3444 | KL: 100.8109
+Epoch 1000 | Beta: 1.00 | Loss: 132.6318 | NLL: 33.1279 | KL: 99.5039
+Correlation Heatmap saved to paper_plots\run_20260103_100128/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 27
+Frequenza Osservata: 0.0246 (Target: 0.0500)
+LR Statistic: 18.2700 | P-Value: 0.0000
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1046, n01=25, n10=25, n11=2
+LR Independence: 1.8784 (p-value: 0.1705)
+LR Conditional Coverage (CC): 20.1483 | P-Value CC: 0.0000
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_20260103_100128/var_regimes_plot.png'
+
+>>> Analysis Complete.
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_103545
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_103545
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 12
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_103545
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 168.6317 | NLL: 159.6284 | KL: 100.0368
+Epoch 0020 | Beta: 0.19 | Loss: 174.5279 | NLL: 157.9683 | KL: 87.1558
+Epoch 0030 | Beta: 0.29 | Loss: 163.0019 | NLL: 139.3129 | KL: 81.6861
+Epoch 0040 | Beta: 0.39 | Loss: 162.1386 | NLL: 129.9649 | KL: 82.4966
+Epoch 0050 | Beta: 0.49 | Loss: 160.2059 | NLL: 117.2784 | KL: 87.6071
+Epoch 0060 | Beta: 0.59 | Loss: 157.6958 | NLL: 101.3832 | KL: 95.4452
+Epoch 0070 | Beta: 0.69 | Loss: 156.5080 | NLL: 89.1855 | KL: 97.5688
+Epoch 0080 | Beta: 0.79 | Loss: 158.3602 | NLL: 80.4920 | KL: 98.5673
+Epoch 0090 | Beta: 0.89 | Loss: 164.8735 | NLL: 77.0066 | KL: 98.7269
+Epoch 0100 | Beta: 0.99 | Loss: 171.4700 | NLL: 75.3845 | KL: 97.0561
+Epoch 0110 | Beta: 1.00 | Loss: 168.0769 | NLL: 70.4775 | KL: 97.5994
+Epoch 0120 | Beta: 1.00 | Loss: 165.7075 | NLL: 68.4652 | KL: 97.2424
+Epoch 0130 | Beta: 1.00 | Loss: 162.0110 | NLL: 63.8348 | KL: 98.1761
+Epoch 0140 | Beta: 1.00 | Loss: 164.3988 | NLL: 65.2945 | KL: 99.1043
+Epoch 0150 | Beta: 1.00 | Loss: 156.7603 | NLL: 58.0756 | KL: 98.6847
+Epoch 0160 | Beta: 1.00 | Loss: 155.0501 | NLL: 56.0525 | KL: 98.9977
+Epoch 0170 | Beta: 1.00 | Loss: 154.8526 | NLL: 56.9827 | KL: 97.8700
+Epoch 0180 | Beta: 1.00 | Loss: 148.9590 | NLL: 51.0816 | KL: 97.8775
+Epoch 0190 | Beta: 1.00 | Loss: 148.6686 | NLL: 51.4642 | KL: 97.2044
+Epoch 0200 | Beta: 1.00 | Loss: 149.4902 | NLL: 52.1731 | KL: 97.3171
+Epoch 0210 | Beta: 1.00 | Loss: 147.5708 | NLL: 51.2218 | KL: 96.3490
+Epoch 0220 | Beta: 1.00 | Loss: 143.9969 | NLL: 47.1601 | KL: 96.8368
+Epoch 0230 | Beta: 1.00 | Loss: 143.7695 | NLL: 47.1573 | KL: 96.6122
+Epoch 0240 | Beta: 1.00 | Loss: 148.1220 | NLL: 50.6731 | KL: 97.4489
+Epoch 0250 | Beta: 1.00 | Loss: 147.2167 | NLL: 50.4799 | KL: 96.7368
+Epoch 0260 | Beta: 1.00 | Loss: 139.8949 | NLL: 43.7518 | KL: 96.1431
+Epoch 0270 | Beta: 1.00 | Loss: 140.6655 | NLL: 43.4237 | KL: 97.2418
+Epoch 0280 | Beta: 1.00 | Loss: 142.3678 | NLL: 47.9107 | KL: 94.4571
+Epoch 0290 | Beta: 1.00 | Loss: 139.7119 | NLL: 45.0268 | KL: 94.6851
+Epoch 0300 | Beta: 1.00 | Loss: 146.1958 | NLL: 50.4577 | KL: 95.7381
+Epoch 0310 | Beta: 1.00 | Loss: 138.6415 | NLL: 43.6665 | KL: 94.9750
+Epoch 0320 | Beta: 1.00 | Loss: 137.7753 | NLL: 43.7288 | KL: 94.0465
+Epoch 0330 | Beta: 1.00 | Loss: 150.6890 | NLL: 55.6918 | KL: 94.9972
+Epoch 0340 | Beta: 1.00 | Loss: 134.0554 | NLL: 40.1160 | KL: 93.9394
+Epoch 0350 | Beta: 1.00 | Loss: 132.4247 | NLL: 38.4119 | KL: 94.0128
+Epoch 0360 | Beta: 1.00 | Loss: 131.8217 | NLL: 37.3154 | KL: 94.5062
+Epoch 0370 | Beta: 1.00 | Loss: 134.5550 | NLL: 41.5879 | KL: 92.9672
+Epoch 0380 | Beta: 1.00 | Loss: 140.7231 | NLL: 46.5185 | KL: 94.2046
+Epoch 0390 | Beta: 1.00 | Loss: 131.2774 | NLL: 38.1292 | KL: 93.1482
+Epoch 0400 | Beta: 1.00 | Loss: 132.1741 | NLL: 38.0501 | KL: 94.1240
+Epoch 0410 | Beta: 1.00 | Loss: 131.8108 | NLL: 39.5216 | KL: 92.2892
+Epoch 0420 | Beta: 1.00 | Loss: 129.4922 | NLL: 37.3073 | KL: 92.1850
+Epoch 0430 | Beta: 1.00 | Loss: 133.2340 | NLL: 39.1733 | KL: 94.0606
+Epoch 0440 | Beta: 1.00 | Loss: 128.2772 | NLL: 35.6155 | KL: 92.6617
+Epoch 0450 | Beta: 1.00 | Loss: 131.9878 | NLL: 39.3856 | KL: 92.6023
+Epoch 0460 | Beta: 1.00 | Loss: 129.4587 | NLL: 38.9353 | KL: 90.5235
+Epoch 0470 | Beta: 1.00 | Loss: 127.9424 | NLL: 36.6399 | KL: 91.3025
+Epoch 0480 | Beta: 1.00 | Loss: 125.9287 | NLL: 35.1819 | KL: 90.7468
+Epoch 0490 | Beta: 1.00 | Loss: 128.6917 | NLL: 38.3234 | KL: 90.3683
+Epoch 0500 | Beta: 1.00 | Loss: 129.1506 | NLL: 39.3198 | KL: 89.8307
+Epoch 0510 | Beta: 1.00 | Loss: 127.3613 | NLL: 37.4982 | KL: 89.8631
+Epoch 0520 | Beta: 1.00 | Loss: 129.7588 | NLL: 39.8993 | KL: 89.8595
+Epoch 0530 | Beta: 1.00 | Loss: 139.4224 | NLL: 50.5664 | KL: 88.8560
+Epoch 0540 | Beta: 1.00 | Loss: 127.7568 | NLL: 35.2437 | KL: 92.5131
+Epoch 0550 | Beta: 1.00 | Loss: 124.3888 | NLL: 35.5469 | KL: 88.8419
+Epoch 0560 | Beta: 1.00 | Loss: 125.9248 | NLL: 34.7126 | KL: 91.2122
+Epoch 0570 | Beta: 1.00 | Loss: 123.6984 | NLL: 35.4358 | KL: 88.2626
+Epoch 0580 | Beta: 1.00 | Loss: 124.5807 | NLL: 35.7145 | KL: 88.8662
+Epoch 0590 | Beta: 1.00 | Loss: 135.8305 | NLL: 46.1584 | KL: 89.6721
+Epoch 0600 | Beta: 1.00 | Loss: 129.7954 | NLL: 40.2981 | KL: 89.4973
+Epoch 0610 | Beta: 1.00 | Loss: 127.7748 | NLL: 40.1313 | KL: 87.6435
+Epoch 0620 | Beta: 1.00 | Loss: 126.6874 | NLL: 38.9800 | KL: 87.7074
+Epoch 0630 | Beta: 1.00 | Loss: 124.9580 | NLL: 36.9791 | KL: 87.9789
+Epoch 0640 | Beta: 1.00 | Loss: 126.4544 | NLL: 38.9127 | KL: 87.5417
+Epoch 0650 | Beta: 1.00 | Loss: 127.2304 | NLL: 39.5585 | KL: 87.6718
+Epoch 0660 | Beta: 1.00 | Loss: 122.4351 | NLL: 35.1865 | KL: 87.2486
+Epoch 0670 | Beta: 1.00 | Loss: 126.3454 | NLL: 37.1701 | KL: 89.1753
+Epoch 0680 | Beta: 1.00 | Loss: 138.0261 | NLL: 47.0067 | KL: 91.0194
+Epoch 0690 | Beta: 1.00 | Loss: 136.8043 | NLL: 49.8573 | KL: 86.9470
+Epoch 0700 | Beta: 1.00 | Loss: 130.2668 | NLL: 42.1867 | KL: 88.0801
+Epoch 0710 | Beta: 1.00 | Loss: 121.1475 | NLL: 33.6286 | KL: 87.5189
+Epoch 0720 | Beta: 1.00 | Loss: 118.3050 | NLL: 33.3383 | KL: 84.9667
+Epoch 0730 | Beta: 1.00 | Loss: 120.0016 | NLL: 34.4912 | KL: 85.5104
+Epoch 0740 | Beta: 1.00 | Loss: 119.5250 | NLL: 32.7533 | KL: 86.7717
+Epoch 0750 | Beta: 1.00 | Loss: 127.0392 | NLL: 37.2367 | KL: 89.8025
+Epoch 0760 | Beta: 1.00 | Loss: 136.9272 | NLL: 50.8094 | KL: 86.1178
+Epoch 0770 | Beta: 1.00 | Loss: 121.4823 | NLL: 34.7855 | KL: 86.6968
+Epoch 0780 | Beta: 1.00 | Loss: 122.0368 | NLL: 32.1695 | KL: 89.8673
+Epoch 0790 | Beta: 1.00 | Loss: 118.8462 | NLL: 32.6568 | KL: 86.1894
+Epoch 0800 | Beta: 1.00 | Loss: 118.7527 | NLL: 32.4613 | KL: 86.2914
+Epoch 0810 | Beta: 1.00 | Loss: 126.3534 | NLL: 39.0009 | KL: 87.3525
+Epoch 0820 | Beta: 1.00 | Loss: 120.6731 | NLL: 32.8377 | KL: 87.8354
+Epoch 0830 | Beta: 1.00 | Loss: 120.7796 | NLL: 32.5420 | KL: 88.2376
+Epoch 0840 | Beta: 1.00 | Loss: 133.1909 | NLL: 46.3547 | KL: 86.8362
+Epoch 0850 | Beta: 1.00 | Loss: 119.4044 | NLL: 32.9638 | KL: 86.4406
+Epoch 0860 | Beta: 1.00 | Loss: 119.9630 | NLL: 34.4908 | KL: 85.4722
+Epoch 0870 | Beta: 1.00 | Loss: 118.4409 | NLL: 32.9651 | KL: 85.4758
+Epoch 0880 | Beta: 1.00 | Loss: 121.0529 | NLL: 34.9808 | KL: 86.0721
+Epoch 0890 | Beta: 1.00 | Loss: 116.8291 | NLL: 31.4637 | KL: 85.3654
+Epoch 0900 | Beta: 1.00 | Loss: 117.3676 | NLL: 32.0735 | KL: 85.2941
+Epoch 0910 | Beta: 1.00 | Loss: 116.5104 | NLL: 31.0570 | KL: 85.4534
+Epoch 0920 | Beta: 1.00 | Loss: 121.3135 | NLL: 35.1122 | KL: 86.2013
+Epoch 0930 | Beta: 1.00 | Loss: 126.2782 | NLL: 39.8502 | KL: 86.4280
+Epoch 0940 | Beta: 1.00 | Loss: 117.3770 | NLL: 31.6234 | KL: 85.7535
+Epoch 0950 | Beta: 1.00 | Loss: 119.5641 | NLL: 33.7253 | KL: 85.8388
+Epoch 0960 | Beta: 1.00 | Loss: 120.0773 | NLL: 35.2375 | KL: 84.8398
+Epoch 0970 | Beta: 1.00 | Loss: 121.1648 | NLL: 37.2148 | KL: 83.9500
+Epoch 0980 | Beta: 1.00 | Loss: 118.1083 | NLL: 34.1226 | KL: 83.9857
+Epoch 0990 | Beta: 1.00 | Loss: 127.2624 | NLL: 39.9673 | KL: 87.2951
+Epoch 1000 | Beta: 1.00 | Loss: 116.3311 | NLL: 30.3442 | KL: 85.9869
+Correlation Heatmap saved to paper_plots\run_20260103_103545/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 23
+Frequenza Osservata: 0.0209 (Target: 0.0500)
+LR Statistic: 24.8052 | P-Value: 0.0000
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1054, n01=21, n10=21, n11=2
+LR Independence: 2.8689 (p-value: 0.0903)
+LR Conditional Coverage (CC): 27.6740 | P-Value CC: 0.0000
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_20260103_103545/var_regimes_plot.png'
+
+>>> Analysis Complete.
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_110745
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_110745
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 13
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_110745
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 164.6040 | NLL: 155.0324 | KL: 106.3510
+Epoch 0020 | Beta: 0.19 | Loss: 153.9925 | NLL: 134.9102 | KL: 100.4335
+Epoch 0030 | Beta: 0.29 | Loss: 150.8461 | NLL: 119.7328 | KL: 107.2874
+Epoch 0040 | Beta: 0.39 | Loss: 147.6221 | NLL: 104.3567 | KL: 110.9369
+Epoch 0050 | Beta: 0.49 | Loss: 146.3299 | NLL: 91.1780 | KL: 112.5548
+Epoch 0060 | Beta: 0.59 | Loss: 149.3977 | NLL: 83.2678 | KL: 112.0845
+Epoch 0070 | Beta: 0.69 | Loss: 155.0382 | NLL: 77.5856 | KL: 112.2501
+Epoch 0080 | Beta: 0.79 | Loss: 159.0895 | NLL: 72.3899 | KL: 109.7463
+Epoch 0090 | Beta: 0.89 | Loss: 166.5267 | NLL: 70.1092 | KL: 108.3343
+Epoch 0100 | Beta: 0.99 | Loss: 175.9127 | NLL: 68.5794 | KL: 108.4175
+Epoch 0110 | Beta: 1.00 | Loss: 172.1771 | NLL: 64.0398 | KL: 108.1373
+Epoch 0120 | Beta: 1.00 | Loss: 168.1811 | NLL: 61.2190 | KL: 106.9620
+Epoch 0130 | Beta: 1.00 | Loss: 166.3551 | NLL: 58.9732 | KL: 107.3819
+Epoch 0140 | Beta: 1.00 | Loss: 164.3064 | NLL: 57.8191 | KL: 106.4873
+Epoch 0150 | Beta: 1.00 | Loss: 162.9206 | NLL: 54.8814 | KL: 108.0392
+Epoch 0160 | Beta: 1.00 | Loss: 160.2358 | NLL: 53.1087 | KL: 107.1271
+Epoch 0170 | Beta: 1.00 | Loss: 163.3616 | NLL: 55.1903 | KL: 108.1713
+Epoch 0180 | Beta: 1.00 | Loss: 157.4239 | NLL: 50.8620 | KL: 106.5620
+Epoch 0190 | Beta: 1.00 | Loss: 158.4721 | NLL: 51.3066 | KL: 107.1655
+Epoch 0200 | Beta: 1.00 | Loss: 157.5860 | NLL: 51.2016 | KL: 106.3844
+Epoch 0210 | Beta: 1.00 | Loss: 154.0945 | NLL: 47.0948 | KL: 106.9997
+Epoch 0220 | Beta: 1.00 | Loss: 154.2457 | NLL: 48.5185 | KL: 105.7272
+Epoch 0230 | Beta: 1.00 | Loss: 153.6725 | NLL: 47.3678 | KL: 106.3048
+Epoch 0240 | Beta: 1.00 | Loss: 153.1164 | NLL: 48.4253 | KL: 104.6911
+Epoch 0250 | Beta: 1.00 | Loss: 149.4994 | NLL: 45.1220 | KL: 104.3773
+Epoch 0260 | Beta: 1.00 | Loss: 147.8125 | NLL: 43.2796 | KL: 104.5329
+Epoch 0270 | Beta: 1.00 | Loss: 151.2225 | NLL: 45.8133 | KL: 105.4092
+Epoch 0280 | Beta: 1.00 | Loss: 146.3518 | NLL: 41.6851 | KL: 104.6667
+Epoch 0290 | Beta: 1.00 | Loss: 146.8249 | NLL: 42.2949 | KL: 104.5300
+Epoch 0300 | Beta: 1.00 | Loss: 148.3220 | NLL: 44.2221 | KL: 104.1000
+Epoch 0310 | Beta: 1.00 | Loss: 146.6148 | NLL: 43.2765 | KL: 103.3383
+Epoch 0320 | Beta: 1.00 | Loss: 143.7190 | NLL: 41.8156 | KL: 101.9034
+Epoch 0330 | Beta: 1.00 | Loss: 148.2711 | NLL: 45.3441 | KL: 102.9270
+Epoch 0340 | Beta: 1.00 | Loss: 144.0794 | NLL: 41.7428 | KL: 102.3366
+Epoch 0350 | Beta: 1.00 | Loss: 143.1163 | NLL: 41.9487 | KL: 101.1676
+Epoch 0360 | Beta: 1.00 | Loss: 144.3268 | NLL: 42.1428 | KL: 102.1840
+Epoch 0370 | Beta: 1.00 | Loss: 141.2377 | NLL: 38.8874 | KL: 102.3503
+Epoch 0380 | Beta: 1.00 | Loss: 143.3193 | NLL: 41.5250 | KL: 101.7943
+Epoch 0390 | Beta: 1.00 | Loss: 147.0080 | NLL: 46.1398 | KL: 100.8682
+Epoch 0400 | Beta: 1.00 | Loss: 142.2652 | NLL: 38.6121 | KL: 103.6532
+Epoch 0410 | Beta: 1.00 | Loss: 141.0762 | NLL: 40.0788 | KL: 100.9974
+Epoch 0420 | Beta: 1.00 | Loss: 142.4771 | NLL: 40.5672 | KL: 101.9099
+Epoch 0430 | Beta: 1.00 | Loss: 139.3740 | NLL: 38.8176 | KL: 100.5564
+Epoch 0440 | Beta: 1.00 | Loss: 137.8712 | NLL: 36.5827 | KL: 101.2885
+Epoch 0450 | Beta: 1.00 | Loss: 143.4337 | NLL: 41.6744 | KL: 101.7593
+Epoch 0460 | Beta: 1.00 | Loss: 141.9158 | NLL: 39.9809 | KL: 101.9349
+Epoch 0470 | Beta: 1.00 | Loss: 137.3792 | NLL: 37.5330 | KL: 99.8462
+Epoch 0480 | Beta: 1.00 | Loss: 141.7929 | NLL: 39.5960 | KL: 102.1969
+Epoch 0490 | Beta: 1.00 | Loss: 136.9485 | NLL: 36.7891 | KL: 100.1595
+Epoch 0500 | Beta: 1.00 | Loss: 140.8784 | NLL: 40.7188 | KL: 100.1596
+Epoch 0510 | Beta: 1.00 | Loss: 138.1426 | NLL: 37.4356 | KL: 100.7070
+Epoch 0520 | Beta: 1.00 | Loss: 137.3248 | NLL: 35.2321 | KL: 102.0927
+Epoch 0530 | Beta: 1.00 | Loss: 136.9700 | NLL: 36.5910 | KL: 100.3790
+Epoch 0540 | Beta: 1.00 | Loss: 136.1971 | NLL: 37.7465 | KL: 98.4506
+Epoch 0550 | Beta: 1.00 | Loss: 135.8711 | NLL: 35.8586 | KL: 100.0124
+Epoch 0560 | Beta: 1.00 | Loss: 135.2772 | NLL: 37.0014 | KL: 98.2759
+Epoch 0570 | Beta: 1.00 | Loss: 137.4301 | NLL: 37.9309 | KL: 99.4992
+Epoch 0580 | Beta: 1.00 | Loss: 136.4510 | NLL: 35.6932 | KL: 100.7578
+Epoch 0590 | Beta: 1.00 | Loss: 133.2442 | NLL: 34.5065 | KL: 98.7376
+Epoch 0600 | Beta: 1.00 | Loss: 136.5237 | NLL: 35.4297 | KL: 101.0941
+Epoch 0610 | Beta: 1.00 | Loss: 138.7370 | NLL: 36.6338 | KL: 102.1032
+Epoch 0620 | Beta: 1.00 | Loss: 135.2716 | NLL: 37.8905 | KL: 97.3811
+Epoch 0630 | Beta: 1.00 | Loss: 132.3269 | NLL: 34.3490 | KL: 97.9779
+Epoch 0640 | Beta: 1.00 | Loss: 132.5259 | NLL: 34.4956 | KL: 98.0304
+Epoch 0650 | Beta: 1.00 | Loss: 133.5908 | NLL: 35.7737 | KL: 97.8171
+Epoch 0660 | Beta: 1.00 | Loss: 154.5275 | NLL: 56.2692 | KL: 98.2583
+Epoch 0670 | Beta: 1.00 | Loss: 139.2459 | NLL: 42.8244 | KL: 96.4215
+Epoch 0680 | Beta: 1.00 | Loss: 132.4939 | NLL: 34.7892 | KL: 97.7046
+Epoch 0690 | Beta: 1.00 | Loss: 137.0765 | NLL: 39.1323 | KL: 97.9443
+Epoch 0700 | Beta: 1.00 | Loss: 136.6826 | NLL: 40.3530 | KL: 96.3296
+Epoch 0710 | Beta: 1.00 | Loss: 130.0374 | NLL: 34.3783 | KL: 95.6591
+Epoch 0720 | Beta: 1.00 | Loss: 134.8071 | NLL: 35.0918 | KL: 99.7153
+Epoch 0730 | Beta: 1.00 | Loss: 130.5869 | NLL: 32.6477 | KL: 97.9392
+Epoch 0740 | Beta: 1.00 | Loss: 130.4087 | NLL: 34.0548 | KL: 96.3539
+Epoch 0750 | Beta: 1.00 | Loss: 129.7759 | NLL: 33.4850 | KL: 96.2909
+Epoch 0760 | Beta: 1.00 | Loss: 128.6087 | NLL: 32.4174 | KL: 96.1914
+Epoch 0770 | Beta: 1.00 | Loss: 128.4066 | NLL: 32.3865 | KL: 96.0201
+Epoch 0780 | Beta: 1.00 | Loss: 140.6768 | NLL: 42.1325 | KL: 98.5443
+Epoch 0790 | Beta: 1.00 | Loss: 130.1551 | NLL: 33.9814 | KL: 96.1737
+Epoch 0800 | Beta: 1.00 | Loss: 137.6524 | NLL: 39.7290 | KL: 97.9234
+Epoch 0810 | Beta: 1.00 | Loss: 128.6296 | NLL: 33.9104 | KL: 94.7192
+Epoch 0820 | Beta: 1.00 | Loss: 128.4842 | NLL: 32.0599 | KL: 96.4243
+Epoch 0830 | Beta: 1.00 | Loss: 129.3489 | NLL: 34.0745 | KL: 95.2744
+Epoch 0840 | Beta: 1.00 | Loss: 130.9688 | NLL: 34.8705 | KL: 96.0982
+Epoch 0850 | Beta: 1.00 | Loss: 129.9388 | NLL: 34.1259 | KL: 95.8129
+Epoch 0860 | Beta: 1.00 | Loss: 131.9821 | NLL: 36.9355 | KL: 95.0465
+Epoch 0870 | Beta: 1.00 | Loss: 129.7010 | NLL: 34.6743 | KL: 95.0266
+Epoch 0880 | Beta: 1.00 | Loss: 134.6712 | NLL: 39.6544 | KL: 95.0168
+Epoch 0890 | Beta: 1.00 | Loss: 129.4902 | NLL: 34.8586 | KL: 94.6317
+Epoch 0900 | Beta: 1.00 | Loss: 128.2970 | NLL: 34.5219 | KL: 93.7751
+Epoch 0910 | Beta: 1.00 | Loss: 128.8637 | NLL: 34.2781 | KL: 94.5857
+Epoch 0920 | Beta: 1.00 | Loss: 125.7614 | NLL: 32.2673 | KL: 93.4941
+Epoch 0930 | Beta: 1.00 | Loss: 126.1097 | NLL: 33.7761 | KL: 92.3336
+Epoch 0940 | Beta: 1.00 | Loss: 125.4595 | NLL: 32.4278 | KL: 93.0317
+Epoch 0950 | Beta: 1.00 | Loss: 128.0032 | NLL: 34.1134 | KL: 93.8898
+Epoch 0960 | Beta: 1.00 | Loss: 125.8128 | NLL: 32.5112 | KL: 93.3016
+Epoch 0970 | Beta: 1.00 | Loss: 129.4671 | NLL: 33.4259 | KL: 96.0412
+Epoch 0980 | Beta: 1.00 | Loss: 125.2251 | NLL: 32.2119 | KL: 93.0132
+Epoch 0990 | Beta: 1.00 | Loss: 127.0126 | NLL: 29.6369 | KL: 97.3757
+Epoch 1000 | Beta: 1.00 | Loss: 126.9917 | NLL: 34.0120 | KL: 92.9797
+Correlation Heatmap saved to paper_plots\run_20260103_110745/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 41
+Frequenza Osservata: 0.0373 (Target: 0.0500)
+LR Statistic: 4.0717 | P-Value: 0.0436
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1019, n01=38, n10=38, n11=3
+LR Independence: 1.2111 (p-value: 0.2711)
+LR Conditional Coverage (CC): 5.2828 | P-Value CC: 0.0713
+RISULTATO: NON RIGETTO H0. Il modello è Valido Condizionalmente.
+Grafico regimi salvato in 'paper_plots\run_20260103_110745/var_regimes_plot.png'
+
+>>> Analysis Complete.
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_114030
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_114030
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 14
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_114030
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 147.1234 | NLL: 140.5651 | KL: 72.8708
+Epoch 0020 | Beta: 0.19 | Loss: 132.7467 | NLL: 116.1617 | KL: 87.2895
+Epoch 0030 | Beta: 0.29 | Loss: 127.6288 | NLL: 101.8287 | KL: 88.9656
+Epoch 0040 | Beta: 0.39 | Loss: 120.0341 | NLL: 85.0736 | KL: 89.6424
+Epoch 0050 | Beta: 0.49 | Loss: 120.0014 | NLL: 75.9675 | KL: 89.8651
+Epoch 0060 | Beta: 0.59 | Loss: 121.6718 | NLL: 69.7445 | KL: 88.0124
+Epoch 0070 | Beta: 0.69 | Loss: 126.3969 | NLL: 67.2308 | KL: 85.7479
+Epoch 0080 | Beta: 0.79 | Loss: 132.4099 | NLL: 64.8112 | KL: 85.5681
+Epoch 0090 | Beta: 0.89 | Loss: 134.9206 | NLL: 62.1702 | KL: 81.7420
+Epoch 0100 | Beta: 0.99 | Loss: 142.4232 | NLL: 61.7767 | KL: 81.4611
+Epoch 0110 | Beta: 1.00 | Loss: 138.5444 | NLL: 57.5334 | KL: 81.0110
+Epoch 0120 | Beta: 1.00 | Loss: 138.0362 | NLL: 56.2060 | KL: 81.8302
+Epoch 0130 | Beta: 1.00 | Loss: 133.9972 | NLL: 53.7153 | KL: 80.2818
+Epoch 0140 | Beta: 1.00 | Loss: 132.5543 | NLL: 49.4112 | KL: 83.1431
+Epoch 0150 | Beta: 1.00 | Loss: 130.0919 | NLL: 49.9972 | KL: 80.0947
+Epoch 0160 | Beta: 1.00 | Loss: 133.2954 | NLL: 53.7271 | KL: 79.5683
+Epoch 0170 | Beta: 1.00 | Loss: 129.5807 | NLL: 49.5415 | KL: 80.0393
+Epoch 0180 | Beta: 1.00 | Loss: 128.7885 | NLL: 49.4159 | KL: 79.3726
+Epoch 0190 | Beta: 1.00 | Loss: 124.8133 | NLL: 43.5185 | KL: 81.2947
+Epoch 0200 | Beta: 1.00 | Loss: 125.1681 | NLL: 45.4962 | KL: 79.6719
+Epoch 0210 | Beta: 1.00 | Loss: 123.2247 | NLL: 41.4687 | KL: 81.7560
+Epoch 0220 | Beta: 1.00 | Loss: 122.8555 | NLL: 43.7732 | KL: 79.0824
+Epoch 0230 | Beta: 1.00 | Loss: 120.4803 | NLL: 40.0537 | KL: 80.4266
+Epoch 0240 | Beta: 1.00 | Loss: 127.8308 | NLL: 48.4862 | KL: 79.3445
+Epoch 0250 | Beta: 1.00 | Loss: 118.7892 | NLL: 40.4689 | KL: 78.3203
+Epoch 0260 | Beta: 1.00 | Loss: 122.8452 | NLL: 43.5515 | KL: 79.2937
+Epoch 0270 | Beta: 1.00 | Loss: 119.9002 | NLL: 41.3842 | KL: 78.5161
+Epoch 0280 | Beta: 1.00 | Loss: 114.7709 | NLL: 36.4014 | KL: 78.3696
+Epoch 0290 | Beta: 1.00 | Loss: 119.4233 | NLL: 40.1726 | KL: 79.2507
+Epoch 0300 | Beta: 1.00 | Loss: 119.7954 | NLL: 37.9640 | KL: 81.8314
+Epoch 0310 | Beta: 1.00 | Loss: 118.9175 | NLL: 41.2160 | KL: 77.7015
+Epoch 0320 | Beta: 1.00 | Loss: 113.8590 | NLL: 35.1253 | KL: 78.7337
+Epoch 0330 | Beta: 1.00 | Loss: 111.2451 | NLL: 34.9028 | KL: 76.3423
+Epoch 0340 | Beta: 1.00 | Loss: 112.6654 | NLL: 33.3677 | KL: 79.2977
+Epoch 0350 | Beta: 1.00 | Loss: 114.5022 | NLL: 34.6758 | KL: 79.8265
+Epoch 0360 | Beta: 1.00 | Loss: 111.8951 | NLL: 35.2359 | KL: 76.6592
+Epoch 0370 | Beta: 1.00 | Loss: 112.5637 | NLL: 35.5917 | KL: 76.9720
+Epoch 0380 | Beta: 1.00 | Loss: 112.6080 | NLL: 35.6136 | KL: 76.9944
+Epoch 0390 | Beta: 1.00 | Loss: 110.8469 | NLL: 33.9000 | KL: 76.9469
+Epoch 0400 | Beta: 1.00 | Loss: 111.3131 | NLL: 31.3048 | KL: 80.0084
+Epoch 0410 | Beta: 1.00 | Loss: 111.2783 | NLL: 32.4162 | KL: 78.8621
+Epoch 0420 | Beta: 1.00 | Loss: 120.3581 | NLL: 42.7661 | KL: 77.5921
+Epoch 0430 | Beta: 1.00 | Loss: 111.0031 | NLL: 33.3640 | KL: 77.6391
+Epoch 0440 | Beta: 1.00 | Loss: 108.9659 | NLL: 31.3062 | KL: 77.6597
+Epoch 0450 | Beta: 1.00 | Loss: 108.5006 | NLL: 31.9140 | KL: 76.5866
+Epoch 0460 | Beta: 1.00 | Loss: 110.3936 | NLL: 33.6447 | KL: 76.7489
+Epoch 0470 | Beta: 1.00 | Loss: 107.8124 | NLL: 31.5542 | KL: 76.2581
+Epoch 0480 | Beta: 1.00 | Loss: 111.0983 | NLL: 34.8311 | KL: 76.2672
+Epoch 0490 | Beta: 1.00 | Loss: 109.2143 | NLL: 32.6904 | KL: 76.5239
+Epoch 0500 | Beta: 1.00 | Loss: 107.7679 | NLL: 31.2655 | KL: 76.5024
+Epoch 0510 | Beta: 1.00 | Loss: 106.0374 | NLL: 29.6615 | KL: 76.3759
+Epoch 0520 | Beta: 1.00 | Loss: 107.1076 | NLL: 30.2800 | KL: 76.8276
+Epoch 0530 | Beta: 1.00 | Loss: 107.1341 | NLL: 30.5938 | KL: 76.5403
+Epoch 0540 | Beta: 1.00 | Loss: 107.5794 | NLL: 32.2430 | KL: 75.3364
+Epoch 0550 | Beta: 1.00 | Loss: 105.5234 | NLL: 28.8544 | KL: 76.6690
+Epoch 0560 | Beta: 1.00 | Loss: 107.6137 | NLL: 32.6694 | KL: 74.9443
+Epoch 0570 | Beta: 1.00 | Loss: 104.6617 | NLL: 28.7664 | KL: 75.8954
+Epoch 0580 | Beta: 1.00 | Loss: 107.9771 | NLL: 29.7590 | KL: 78.2181
+Epoch 0590 | Beta: 1.00 | Loss: 110.2563 | NLL: 31.7366 | KL: 78.5197
+Epoch 0600 | Beta: 1.00 | Loss: 106.8349 | NLL: 29.9668 | KL: 76.8681
+Epoch 0610 | Beta: 1.00 | Loss: 105.3011 | NLL: 27.2736 | KL: 78.0275
+Epoch 0620 | Beta: 1.00 | Loss: 103.5089 | NLL: 27.6805 | KL: 75.8284
+Epoch 0630 | Beta: 1.00 | Loss: 105.6646 | NLL: 30.0758 | KL: 75.5888
+Epoch 0640 | Beta: 1.00 | Loss: 109.7423 | NLL: 34.3321 | KL: 75.4102
+Epoch 0650 | Beta: 1.00 | Loss: 107.9988 | NLL: 32.2362 | KL: 75.7627
+Epoch 0660 | Beta: 1.00 | Loss: 102.5220 | NLL: 27.6281 | KL: 74.8938
+Epoch 0670 | Beta: 1.00 | Loss: 105.2012 | NLL: 30.2807 | KL: 74.9205
+Epoch 0680 | Beta: 1.00 | Loss: 105.6041 | NLL: 28.8118 | KL: 76.7923
+Epoch 0690 | Beta: 1.00 | Loss: 106.1318 | NLL: 29.9399 | KL: 76.1919
+Epoch 0700 | Beta: 1.00 | Loss: 103.2461 | NLL: 27.5652 | KL: 75.6810
+Epoch 0710 | Beta: 1.00 | Loss: 104.0464 | NLL: 27.7572 | KL: 76.2892
+Epoch 0720 | Beta: 1.00 | Loss: 105.0961 | NLL: 26.3143 | KL: 78.7818
+Epoch 0730 | Beta: 1.00 | Loss: 107.1319 | NLL: 30.8167 | KL: 76.3153
+Epoch 0740 | Beta: 1.00 | Loss: 112.6124 | NLL: 37.5747 | KL: 75.0378
+Epoch 0750 | Beta: 1.00 | Loss: 103.6868 | NLL: 28.5176 | KL: 75.1692
+Epoch 0760 | Beta: 1.00 | Loss: 103.5616 | NLL: 26.8737 | KL: 76.6879
+Epoch 0770 | Beta: 1.00 | Loss: 121.2754 | NLL: 44.8891 | KL: 76.3862
+Epoch 0780 | Beta: 1.00 | Loss: 102.7689 | NLL: 25.2937 | KL: 77.4752
+Epoch 0790 | Beta: 1.00 | Loss: 103.1785 | NLL: 27.3601 | KL: 75.8185
+Epoch 0800 | Beta: 1.00 | Loss: 102.5691 | NLL: 27.4837 | KL: 75.0854
+Epoch 0810 | Beta: 1.00 | Loss: 102.4390 | NLL: 27.6833 | KL: 74.7557
+Epoch 0820 | Beta: 1.00 | Loss: 101.2995 | NLL: 26.9766 | KL: 74.3229
+Epoch 0830 | Beta: 1.00 | Loss: 103.1196 | NLL: 28.7667 | KL: 74.3529
+Epoch 0840 | Beta: 1.00 | Loss: 103.8538 | NLL: 28.7155 | KL: 75.1382
+Epoch 0850 | Beta: 1.00 | Loss: 102.1384 | NLL: 27.0035 | KL: 75.1349
+Epoch 0860 | Beta: 1.00 | Loss: 100.9272 | NLL: 25.9696 | KL: 74.9576
+Epoch 0870 | Beta: 1.00 | Loss: 103.2387 | NLL: 26.6487 | KL: 76.5900
+Epoch 0880 | Beta: 1.00 | Loss: 100.5594 | NLL: 27.6089 | KL: 72.9505
+Epoch 0890 | Beta: 1.00 | Loss: 102.3915 | NLL: 27.8477 | KL: 74.5438
+Epoch 0900 | Beta: 1.00 | Loss: 106.5159 | NLL: 33.5897 | KL: 72.9262
+Epoch 0910 | Beta: 1.00 | Loss: 100.3930 | NLL: 25.9892 | KL: 74.4039
+Epoch 0920 | Beta: 1.00 | Loss: 102.0770 | NLL: 27.3899 | KL: 74.6870
+Epoch 0930 | Beta: 1.00 | Loss: 101.5262 | NLL: 26.1757 | KL: 75.3504
+Epoch 0940 | Beta: 1.00 | Loss: 100.3124 | NLL: 27.2989 | KL: 73.0135
+Epoch 0950 | Beta: 1.00 | Loss: 104.0408 | NLL: 30.2707 | KL: 73.7702
+Epoch 0960 | Beta: 1.00 | Loss: 100.1302 | NLL: 26.5700 | KL: 73.5602
+Epoch 0970 | Beta: 1.00 | Loss: 108.5708 | NLL: 36.6166 | KL: 71.9542
+Epoch 0980 | Beta: 1.00 | Loss: 98.8807 | NLL: 25.3462 | KL: 73.5344
+Epoch 0990 | Beta: 1.00 | Loss: 99.2284 | NLL: 25.7669 | KL: 73.4615
+Epoch 1000 | Beta: 1.00 | Loss: 101.0467 | NLL: 28.1524 | KL: 72.8943
+Correlation Heatmap saved to paper_plots\run_20260103_114030/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 44
+Frequenza Osservata: 0.0400 (Target: 0.0500)
+LR Statistic: 2.4578 | P-Value: 0.1169
+RISULTATO: NON RIGETTO H0. Il modello è statisticamente Valido.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1013, n01=41, n10=41, n11=3
+LR Independence: 0.7899 (p-value: 0.3741)
+LR Conditional Coverage (CC): 3.2478 | P-Value CC: 0.1971
+RISULTATO: NON RIGETTO H0. Il modello è Valido Condizionalmente.
+Grafico regimi salvato in 'paper_plots\run_20260103_114030/var_regimes_plot.png'
+
+>>> Analysis Complete.
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_121541
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_121541
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 15
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_121541
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 153.3932 | NLL: 144.4548 | KL: 99.3151
+Epoch 0020 | Beta: 0.19 | Loss: 143.8939 | NLL: 122.7094 | KL: 111.4970
+Epoch 0030 | Beta: 0.29 | Loss: 137.2058 | NLL: 102.4441 | KL: 119.8678
+Epoch 0040 | Beta: 0.39 | Loss: 135.2776 | NLL: 87.6560 | KL: 122.1066
+Epoch 0050 | Beta: 0.49 | Loss: 138.1310 | NLL: 78.7303 | KL: 121.2260
+Epoch 0060 | Beta: 0.59 | Loss: 142.5804 | NLL: 72.8726 | KL: 118.1489
+Epoch 0070 | Beta: 0.69 | Loss: 149.8211 | NLL: 69.8282 | KL: 115.9318
+Epoch 0080 | Beta: 0.79 | Loss: 154.3589 | NLL: 64.5975 | KL: 113.6219
+Epoch 0090 | Beta: 0.89 | Loss: 161.9670 | NLL: 63.7216 | KL: 110.3881
+Epoch 0100 | Beta: 0.99 | Loss: 167.2346 | NLL: 61.2204 | KL: 107.0850
+Epoch 0110 | Beta: 1.00 | Loss: 162.3688 | NLL: 56.9744 | KL: 105.3944
+Epoch 0120 | Beta: 1.00 | Loss: 158.5771 | NLL: 54.5565 | KL: 104.0206
+Epoch 0130 | Beta: 1.00 | Loss: 156.3243 | NLL: 53.8363 | KL: 102.4879
+Epoch 0140 | Beta: 1.00 | Loss: 155.0185 | NLL: 51.8865 | KL: 103.1320
+Epoch 0150 | Beta: 1.00 | Loss: 150.9285 | NLL: 48.4573 | KL: 102.4712
+Epoch 0160 | Beta: 1.00 | Loss: 149.6051 | NLL: 47.4639 | KL: 102.1412
+Epoch 0170 | Beta: 1.00 | Loss: 151.4327 | NLL: 46.1650 | KL: 105.2677
+Epoch 0180 | Beta: 1.00 | Loss: 145.7219 | NLL: 44.5615 | KL: 101.1605
+Epoch 0190 | Beta: 1.00 | Loss: 145.1836 | NLL: 44.3734 | KL: 100.8102
+Epoch 0200 | Beta: 1.00 | Loss: 144.8039 | NLL: 45.5923 | KL: 99.2116
+Epoch 0210 | Beta: 1.00 | Loss: 141.8685 | NLL: 43.5400 | KL: 98.3285
+Epoch 0220 | Beta: 1.00 | Loss: 140.1316 | NLL: 40.7035 | KL: 99.4281
+Epoch 0230 | Beta: 1.00 | Loss: 146.4199 | NLL: 48.7571 | KL: 97.6629
+Epoch 0240 | Beta: 1.00 | Loss: 140.1197 | NLL: 42.5792 | KL: 97.5405
+Epoch 0250 | Beta: 1.00 | Loss: 140.5789 | NLL: 40.7601 | KL: 99.8188
+Epoch 0260 | Beta: 1.00 | Loss: 166.9065 | NLL: 69.4367 | KL: 97.4697
+Epoch 0270 | Beta: 1.00 | Loss: 137.2869 | NLL: 39.8437 | KL: 97.4432
+Epoch 0280 | Beta: 1.00 | Loss: 135.1140 | NLL: 37.6638 | KL: 97.4502
+Epoch 0290 | Beta: 1.00 | Loss: 135.5927 | NLL: 39.0048 | KL: 96.5879
+Epoch 0300 | Beta: 1.00 | Loss: 134.8817 | NLL: 39.2061 | KL: 95.6755
+Epoch 0310 | Beta: 1.00 | Loss: 133.3560 | NLL: 37.2545 | KL: 96.1015
+Epoch 0320 | Beta: 1.00 | Loss: 133.3434 | NLL: 38.4754 | KL: 94.8680
+Epoch 0330 | Beta: 1.00 | Loss: 132.6521 | NLL: 39.2163 | KL: 93.4358
+Epoch 0340 | Beta: 1.00 | Loss: 132.6038 | NLL: 38.5506 | KL: 94.0532
+Epoch 0350 | Beta: 1.00 | Loss: 131.9420 | NLL: 38.1633 | KL: 93.7787
+Epoch 0360 | Beta: 1.00 | Loss: 131.3909 | NLL: 37.3911 | KL: 93.9998
+Epoch 0370 | Beta: 1.00 | Loss: 130.3277 | NLL: 36.8763 | KL: 93.4514
+Epoch 0380 | Beta: 1.00 | Loss: 131.3558 | NLL: 37.5389 | KL: 93.8169
+Epoch 0390 | Beta: 1.00 | Loss: 127.5914 | NLL: 35.2502 | KL: 92.3412
+Epoch 0400 | Beta: 1.00 | Loss: 129.8066 | NLL: 34.1762 | KL: 95.6304
+Epoch 0410 | Beta: 1.00 | Loss: 128.2446 | NLL: 35.0826 | KL: 93.1620
+Epoch 0420 | Beta: 1.00 | Loss: 126.7077 | NLL: 33.4679 | KL: 93.2397
+Epoch 0430 | Beta: 1.00 | Loss: 127.6813 | NLL: 34.7932 | KL: 92.8881
+Epoch 0440 | Beta: 1.00 | Loss: 126.4489 | NLL: 33.8685 | KL: 92.5804
+Epoch 0450 | Beta: 1.00 | Loss: 127.3761 | NLL: 36.6604 | KL: 90.7157
+Epoch 0460 | Beta: 1.00 | Loss: 129.3238 | NLL: 39.1982 | KL: 90.1256
+Epoch 0470 | Beta: 1.00 | Loss: 124.5526 | NLL: 33.2971 | KL: 91.2555
+Epoch 0480 | Beta: 1.00 | Loss: 126.6138 | NLL: 33.2256 | KL: 93.3883
+Epoch 0490 | Beta: 1.00 | Loss: 125.9091 | NLL: 35.7026 | KL: 90.2066
+Epoch 0500 | Beta: 1.00 | Loss: 124.3334 | NLL: 33.4868 | KL: 90.8466
+Epoch 0510 | Beta: 1.00 | Loss: 124.6332 | NLL: 34.1170 | KL: 90.5162
+Epoch 0520 | Beta: 1.00 | Loss: 125.4496 | NLL: 35.1290 | KL: 90.3206
+Epoch 0530 | Beta: 1.00 | Loss: 123.2736 | NLL: 33.1944 | KL: 90.0792
+Epoch 0540 | Beta: 1.00 | Loss: 127.1259 | NLL: 33.1111 | KL: 94.0148
+Epoch 0550 | Beta: 1.00 | Loss: 125.6937 | NLL: 36.2154 | KL: 89.4783
+Epoch 0560 | Beta: 1.00 | Loss: 124.9164 | NLL: 36.1106 | KL: 88.8059
+Epoch 0570 | Beta: 1.00 | Loss: 121.7693 | NLL: 33.2570 | KL: 88.5124
+Epoch 0580 | Beta: 1.00 | Loss: 160.5945 | NLL: 69.9571 | KL: 90.6374
+Epoch 0590 | Beta: 1.00 | Loss: 123.3852 | NLL: 33.5626 | KL: 89.8227
+Epoch 0600 | Beta: 1.00 | Loss: 119.8567 | NLL: 31.0055 | KL: 88.8511
+Epoch 0610 | Beta: 1.00 | Loss: 123.7384 | NLL: 31.3258 | KL: 92.4126
+Epoch 0620 | Beta: 1.00 | Loss: 133.8521 | NLL: 44.0334 | KL: 89.8187
+Epoch 0630 | Beta: 1.00 | Loss: 127.5263 | NLL: 38.9122 | KL: 88.6141
+Epoch 0640 | Beta: 1.00 | Loss: 121.6374 | NLL: 33.7309 | KL: 87.9065
+Epoch 0650 | Beta: 1.00 | Loss: 120.5946 | NLL: 31.7112 | KL: 88.8833
+Epoch 0660 | Beta: 1.00 | Loss: 120.3532 | NLL: 33.3099 | KL: 87.0433
+Epoch 0670 | Beta: 1.00 | Loss: 123.8177 | NLL: 35.2823 | KL: 88.5354
+Epoch 0680 | Beta: 1.00 | Loss: 120.8916 | NLL: 33.3956 | KL: 87.4960
+Epoch 0690 | Beta: 1.00 | Loss: 121.7696 | NLL: 32.6659 | KL: 89.1037
+Epoch 0700 | Beta: 1.00 | Loss: 119.3656 | NLL: 32.5283 | KL: 86.8373
+Epoch 0710 | Beta: 1.00 | Loss: 118.9909 | NLL: 30.3677 | KL: 88.6232
+Epoch 0720 | Beta: 1.00 | Loss: 117.8902 | NLL: 30.4398 | KL: 87.4503
+Epoch 0730 | Beta: 1.00 | Loss: 116.4810 | NLL: 30.0417 | KL: 86.4394
+Epoch 0740 | Beta: 1.00 | Loss: 118.8571 | NLL: 31.7942 | KL: 87.0630
+Epoch 0750 | Beta: 1.00 | Loss: 151.9253 | NLL: 64.7624 | KL: 87.1629
+Epoch 0760 | Beta: 1.00 | Loss: 117.3395 | NLL: 30.1672 | KL: 87.1722
+Epoch 0770 | Beta: 1.00 | Loss: 141.6968 | NLL: 54.6324 | KL: 87.0644
+Epoch 0780 | Beta: 1.00 | Loss: 122.3251 | NLL: 36.4856 | KL: 85.8396
+Epoch 0790 | Beta: 1.00 | Loss: 118.1227 | NLL: 30.5704 | KL: 87.5523
+Epoch 0800 | Beta: 1.00 | Loss: 119.9943 | NLL: 30.5027 | KL: 89.4917
+Epoch 0810 | Beta: 1.00 | Loss: 123.0906 | NLL: 33.7449 | KL: 89.3457
+Epoch 0820 | Beta: 1.00 | Loss: 116.4584 | NLL: 29.5965 | KL: 86.8619
+Epoch 0830 | Beta: 1.00 | Loss: 117.6945 | NLL: 30.2984 | KL: 87.3960
+Epoch 0840 | Beta: 1.00 | Loss: 115.8993 | NLL: 30.6006 | KL: 85.2987
+Epoch 0850 | Beta: 1.00 | Loss: 118.2192 | NLL: 32.0482 | KL: 86.1709
+Epoch 0860 | Beta: 1.00 | Loss: 119.7263 | NLL: 29.8387 | KL: 89.8876
+Epoch 0870 | Beta: 1.00 | Loss: 116.2537 | NLL: 29.1451 | KL: 87.1086
+Epoch 0880 | Beta: 1.00 | Loss: 118.1325 | NLL: 31.2030 | KL: 86.9294
+Epoch 0890 | Beta: 1.00 | Loss: 114.2182 | NLL: 29.3843 | KL: 84.8339
+Epoch 0900 | Beta: 1.00 | Loss: 130.2653 | NLL: 45.2537 | KL: 85.0116
+Epoch 0910 | Beta: 1.00 | Loss: 116.4622 | NLL: 30.0086 | KL: 86.4536
+Epoch 0920 | Beta: 1.00 | Loss: 121.0585 | NLL: 35.4758 | KL: 85.5827
+Epoch 0930 | Beta: 1.00 | Loss: 116.4717 | NLL: 31.9626 | KL: 84.5090
+Epoch 0940 | Beta: 1.00 | Loss: 119.1901 | NLL: 32.9769 | KL: 86.2132
+Epoch 0950 | Beta: 1.00 | Loss: 115.3344 | NLL: 31.6918 | KL: 83.6427
+Epoch 0960 | Beta: 1.00 | Loss: 118.2173 | NLL: 30.7577 | KL: 87.4596
+Epoch 0970 | Beta: 1.00 | Loss: 120.3842 | NLL: 35.2469 | KL: 85.1373
+Epoch 0980 | Beta: 1.00 | Loss: 113.2822 | NLL: 28.7151 | KL: 84.5671
+Epoch 0990 | Beta: 1.00 | Loss: 116.0108 | NLL: 31.0147 | KL: 84.9961
+Epoch 1000 | Beta: 1.00 | Loss: 116.2686 | NLL: 28.6503 | KL: 87.6183
+Correlation Heatmap saved to paper_plots\run_20260103_121541/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 29
+Frequenza Osservata: 0.0264 (Target: 0.0500)
+LR Statistic: 15.4703 | P-Value: 0.0001
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1043, n01=26, n10=26, n11=3
+LR Independence: 4.0915 (p-value: 0.0431)
+LR Conditional Coverage (CC): 19.5618 | P-Value CC: 0.0001
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_20260103_121541/var_regimes_plot.png'
+
+>>> Analysis Complete.
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_20260103_125104
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_20260103_125104
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 30
+latent_dim: 10
+hidden_dim: 16
+batch_size: 150
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_20260103_125104
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 2.5
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2014-09-18
+Data Analysis End Date:   2024-12-31
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0010 | Beta: 0.09 | Loss: 147.4866 | NLL: 138.5448 | KL: 99.3536
+Epoch 0020 | Beta: 0.19 | Loss: 140.6148 | NLL: 121.4208 | KL: 101.0212
+Epoch 0030 | Beta: 0.29 | Loss: 132.0192 | NLL: 101.1294 | KL: 106.5166
+Epoch 0040 | Beta: 0.39 | Loss: 125.8839 | NLL: 83.9653 | KL: 107.4836
+Epoch 0050 | Beta: 0.49 | Loss: 124.7763 | NLL: 72.1263 | KL: 107.4491
+Epoch 0060 | Beta: 0.59 | Loss: 129.7883 | NLL: 67.7344 | KL: 105.1761
+Epoch 0070 | Beta: 0.69 | Loss: 133.4643 | NLL: 61.9486 | KL: 103.6460
+Epoch 0080 | Beta: 0.79 | Loss: 140.1620 | NLL: 59.6773 | KL: 101.8794
+Epoch 0090 | Beta: 0.89 | Loss: 147.0562 | NLL: 58.1392 | KL: 99.9067
+Epoch 0100 | Beta: 0.99 | Loss: 152.3212 | NLL: 55.9772 | KL: 97.3173
+Epoch 0110 | Beta: 1.00 | Loss: 151.9194 | NLL: 55.3516 | KL: 96.5678
+Epoch 0120 | Beta: 1.00 | Loss: 148.2044 | NLL: 51.7459 | KL: 96.4586
+Epoch 0130 | Beta: 1.00 | Loss: 146.1720 | NLL: 49.3260 | KL: 96.8460
+Epoch 0140 | Beta: 1.00 | Loss: 143.7299 | NLL: 48.3552 | KL: 95.3747
+Epoch 0150 | Beta: 1.00 | Loss: 142.5893 | NLL: 46.9929 | KL: 95.5965
+Epoch 0160 | Beta: 1.00 | Loss: 138.3470 | NLL: 44.8487 | KL: 93.4983
+Epoch 0170 | Beta: 1.00 | Loss: 139.1071 | NLL: 44.9718 | KL: 94.1353
+Epoch 0180 | Beta: 1.00 | Loss: 137.6621 | NLL: 42.9789 | KL: 94.6832
+Epoch 0190 | Beta: 1.00 | Loss: 134.1656 | NLL: 41.4002 | KL: 92.7654
+Epoch 0200 | Beta: 1.00 | Loss: 132.6732 | NLL: 40.9722 | KL: 91.7010
+Epoch 0210 | Beta: 1.00 | Loss: 135.9203 | NLL: 39.4210 | KL: 96.4993
+Epoch 0220 | Beta: 1.00 | Loss: 130.2298 | NLL: 38.0062 | KL: 92.2236
+Epoch 0230 | Beta: 1.00 | Loss: 129.7691 | NLL: 37.4233 | KL: 92.3458
+Epoch 0240 | Beta: 1.00 | Loss: 132.0556 | NLL: 39.7829 | KL: 92.2727
+Epoch 0250 | Beta: 1.00 | Loss: 127.3144 | NLL: 37.0904 | KL: 90.2240
+Epoch 0260 | Beta: 1.00 | Loss: 129.3704 | NLL: 39.5566 | KL: 89.8138
+Epoch 0270 | Beta: 1.00 | Loss: 125.8436 | NLL: 36.3145 | KL: 89.5291
+Epoch 0280 | Beta: 1.00 | Loss: 125.3544 | NLL: 35.4262 | KL: 89.9281
+Epoch 0290 | Beta: 1.00 | Loss: 125.4945 | NLL: 35.8298 | KL: 89.6647
+Epoch 0300 | Beta: 1.00 | Loss: 124.0419 | NLL: 33.9966 | KL: 90.0453
+Epoch 0310 | Beta: 1.00 | Loss: 126.0924 | NLL: 38.8061 | KL: 87.2862
+Epoch 0320 | Beta: 1.00 | Loss: 124.0315 | NLL: 36.3011 | KL: 87.7304
+Epoch 0330 | Beta: 1.00 | Loss: 123.4857 | NLL: 35.8454 | KL: 87.6404
+Epoch 0340 | Beta: 1.00 | Loss: 123.8669 | NLL: 36.5042 | KL: 87.3627
+Epoch 0350 | Beta: 1.00 | Loss: 120.9336 | NLL: 34.2403 | KL: 86.6933
+Epoch 0360 | Beta: 1.00 | Loss: 119.2445 | NLL: 32.2252 | KL: 87.0193
+Epoch 0370 | Beta: 1.00 | Loss: 122.2698 | NLL: 32.2681 | KL: 90.0017
+Epoch 0380 | Beta: 1.00 | Loss: 119.7127 | NLL: 32.6961 | KL: 87.0166
+Epoch 0390 | Beta: 1.00 | Loss: 123.5452 | NLL: 37.2541 | KL: 86.2912
+Epoch 0400 | Beta: 1.00 | Loss: 120.7466 | NLL: 34.8353 | KL: 85.9113
+Epoch 0410 | Beta: 1.00 | Loss: 117.7439 | NLL: 31.5182 | KL: 86.2257
+Epoch 0420 | Beta: 1.00 | Loss: 119.9813 | NLL: 33.3073 | KL: 86.6740
+Epoch 0430 | Beta: 1.00 | Loss: 117.5053 | NLL: 30.3102 | KL: 87.1950
+Epoch 0440 | Beta: 1.00 | Loss: 118.2746 | NLL: 31.3217 | KL: 86.9529
+Epoch 0450 | Beta: 1.00 | Loss: 117.8078 | NLL: 32.7693 | KL: 85.0385
+Epoch 0460 | Beta: 1.00 | Loss: 115.9584 | NLL: 31.5546 | KL: 84.4038
+Epoch 0470 | Beta: 1.00 | Loss: 119.8131 | NLL: 33.0977 | KL: 86.7153
+Epoch 0480 | Beta: 1.00 | Loss: 116.3113 | NLL: 30.3120 | KL: 85.9993
+Epoch 0490 | Beta: 1.00 | Loss: 119.1164 | NLL: 34.2907 | KL: 84.8256
+Epoch 0500 | Beta: 1.00 | Loss: 123.3860 | NLL: 37.6212 | KL: 85.7648
+Epoch 0510 | Beta: 1.00 | Loss: 116.8885 | NLL: 33.4650 | KL: 83.4235
+Epoch 0520 | Beta: 1.00 | Loss: 113.9873 | NLL: 29.5277 | KL: 84.4596
+Epoch 0530 | Beta: 1.00 | Loss: 115.2022 | NLL: 30.7890 | KL: 84.4133
+Epoch 0540 | Beta: 1.00 | Loss: 114.6557 | NLL: 29.9651 | KL: 84.6907
+Epoch 0550 | Beta: 1.00 | Loss: 116.3066 | NLL: 31.3665 | KL: 84.9401
+Epoch 0560 | Beta: 1.00 | Loss: 115.0875 | NLL: 33.1130 | KL: 81.9746
+Epoch 0570 | Beta: 1.00 | Loss: 115.9894 | NLL: 26.8848 | KL: 89.1045
+Epoch 0580 | Beta: 1.00 | Loss: 113.0753 | NLL: 30.1309 | KL: 82.9444
+Epoch 0590 | Beta: 1.00 | Loss: 112.9069 | NLL: 29.0919 | KL: 83.8150
+Epoch 0600 | Beta: 1.00 | Loss: 114.2693 | NLL: 28.9397 | KL: 85.3296
+Epoch 0610 | Beta: 1.00 | Loss: 112.4846 | NLL: 30.8327 | KL: 81.6519
+Epoch 0620 | Beta: 1.00 | Loss: 114.1029 | NLL: 31.4776 | KL: 82.6253
+Epoch 0630 | Beta: 1.00 | Loss: 112.0553 | NLL: 29.1084 | KL: 82.9469
+Epoch 0640 | Beta: 1.00 | Loss: 113.2091 | NLL: 28.2432 | KL: 84.9659
+Epoch 0650 | Beta: 1.00 | Loss: 112.1182 | NLL: 28.6148 | KL: 83.5034
+Epoch 0660 | Beta: 1.00 | Loss: 110.6354 | NLL: 28.5869 | KL: 82.0485
+Epoch 0670 | Beta: 1.00 | Loss: 111.5856 | NLL: 28.3609 | KL: 83.2247
+Epoch 0680 | Beta: 1.00 | Loss: 110.4771 | NLL: 27.5464 | KL: 82.9307
+Epoch 0690 | Beta: 1.00 | Loss: 111.0555 | NLL: 29.9935 | KL: 81.0620
+Epoch 0700 | Beta: 1.00 | Loss: 109.7035 | NLL: 26.2880 | KL: 83.4155
+Epoch 0710 | Beta: 1.00 | Loss: 111.7393 | NLL: 28.5402 | KL: 83.1991
+Epoch 0720 | Beta: 1.00 | Loss: 113.2389 | NLL: 30.0669 | KL: 83.1720
+Epoch 0730 | Beta: 1.00 | Loss: 109.5354 | NLL: 26.7338 | KL: 82.8016
+Epoch 0740 | Beta: 1.00 | Loss: 114.8775 | NLL: 30.2978 | KL: 84.5798
+Epoch 0750 | Beta: 1.00 | Loss: 108.3417 | NLL: 27.3344 | KL: 81.0073
+Epoch 0760 | Beta: 1.00 | Loss: 109.0082 | NLL: 26.4940 | KL: 82.5142
+Epoch 0770 | Beta: 1.00 | Loss: 110.8745 | NLL: 29.5977 | KL: 81.2768
+Epoch 0780 | Beta: 1.00 | Loss: 107.6279 | NLL: 26.8859 | KL: 80.7419
+Epoch 0790 | Beta: 1.00 | Loss: 109.3644 | NLL: 29.3092 | KL: 80.0552
+Epoch 0800 | Beta: 1.00 | Loss: 110.4916 | NLL: 26.9709 | KL: 83.5207
+Epoch 0810 | Beta: 1.00 | Loss: 109.6715 | NLL: 27.1975 | KL: 82.4740
+Epoch 0820 | Beta: 1.00 | Loss: 108.6567 | NLL: 25.4846 | KL: 83.1722
+Epoch 0830 | Beta: 1.00 | Loss: 108.2162 | NLL: 26.2013 | KL: 82.0148
+Epoch 0840 | Beta: 1.00 | Loss: 107.9926 | NLL: 26.8610 | KL: 81.1316
+Epoch 0850 | Beta: 1.00 | Loss: 107.9230 | NLL: 27.2974 | KL: 80.6256
+Epoch 0860 | Beta: 1.00 | Loss: 107.0690 | NLL: 26.3438 | KL: 80.7252
+Epoch 0870 | Beta: 1.00 | Loss: 107.2195 | NLL: 26.8183 | KL: 80.4013
+Epoch 0880 | Beta: 1.00 | Loss: 108.3434 | NLL: 25.7885 | KL: 82.5549
+Epoch 0890 | Beta: 1.00 | Loss: 106.1438 | NLL: 27.3734 | KL: 78.7704
+Epoch 0900 | Beta: 1.00 | Loss: 108.3520 | NLL: 27.1586 | KL: 81.1934
+Epoch 0910 | Beta: 1.00 | Loss: 106.7894 | NLL: 24.2161 | KL: 82.5733
+Epoch 0920 | Beta: 1.00 | Loss: 105.5576 | NLL: 24.8651 | KL: 80.6924
+Epoch 0930 | Beta: 1.00 | Loss: 106.3199 | NLL: 25.2323 | KL: 81.0876
+Epoch 0940 | Beta: 1.00 | Loss: 106.6776 | NLL: 25.6894 | KL: 80.9882
+Epoch 0950 | Beta: 1.00 | Loss: 106.8486 | NLL: 26.9432 | KL: 79.9054
+Epoch 0960 | Beta: 1.00 | Loss: 105.6493 | NLL: 25.1826 | KL: 80.4667
+Epoch 0970 | Beta: 1.00 | Loss: 106.3273 | NLL: 25.3393 | KL: 80.9880
+Epoch 0980 | Beta: 1.00 | Loss: 105.3199 | NLL: 24.9627 | KL: 80.3572
+Epoch 0990 | Beta: 1.00 | Loss: 106.9798 | NLL: 27.9230 | KL: 79.0568
+Epoch 1000 | Beta: 1.00 | Loss: 110.3776 | NLL: 31.3807 | KL: 78.9969
+Correlation Heatmap saved to paper_plots\run_20260103_125104/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 1099
+Violazioni Attese: 55.0
+Violazioni Osservate: 29
+Frequenza Osservata: 0.0264 (Target: 0.0500)
+LR Statistic: 15.4703 | P-Value: 0.0001
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=1043, n01=26, n10=26, n11=3
+LR Independence: 4.0915 (p-value: 0.0431)
+LR Conditional Coverage (CC): 19.5618 | P-Value CC: 0.0001
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_20260103_125104/var_regimes_plot.png'
+
+>>> Analysis Complete.

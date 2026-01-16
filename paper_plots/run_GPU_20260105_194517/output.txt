@@ -1,0 +1,192 @@
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_GPU_20260105_194517
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_GPU_20260105_194517
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 28
+latent_dim: 10
+hidden_dim: 28
+batch_size: 140
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_GPU_20260105_194517
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 4.3
+annealing_decay_rate: 0.96
+annealing_steps: 20
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2018-10-02
+Data Analysis End Date:   2021-06-30
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0050 | Beta: 0.10 | Loss: 122.0566 | NLL: 108.5690 | KL: 141.7140
+Epoch 0100 | Beta: 0.18 | Loss: 109.1775 | NLL: 80.8606 | KL: 154.7698
+Epoch 0150 | Beta: 0.26 | Loss: 98.6440 | NLL: 56.4802 | KL: 160.7890
+Epoch 0200 | Beta: 0.33 | Loss: 97.5005 | NLL: 46.3582 | KL: 153.2082
+Epoch 0250 | Beta: 0.40 | Loss: 102.7626 | NLL: 43.5672 | KL: 148.5670
+Epoch 0300 | Beta: 0.46 | Loss: 104.1372 | NLL: 37.9695 | KL: 144.8486
+Epoch 0350 | Beta: 0.51 | Loss: 108.9171 | NLL: 35.9580 | KL: 143.1955
+Epoch 0400 | Beta: 0.56 | Loss: 108.3059 | NLL: 30.0801 | KL: 140.4174
+Epoch 0450 | Beta: 0.60 | Loss: 112.3226 | NLL: 30.9544 | KL: 135.5989
+Epoch 0500 | Beta: 0.64 | Loss: 115.9353 | NLL: 30.9470 | KL: 133.0297
+Epoch 0550 | Beta: 0.67 | Loss: 113.6852 | NLL: 26.3857 | KL: 129.5429
+Epoch 0600 | Beta: 0.71 | Loss: 113.6571 | NLL: 23.7707 | KL: 127.4005
+Epoch 0650 | Beta: 0.73 | Loss: 115.3472 | NLL: 22.5208 | KL: 126.4475
+Epoch 0700 | Beta: 0.76 | Loss: 115.4644 | NLL: 20.2960 | KL: 125.2369
+Epoch 0750 | Beta: 0.78 | Loss: 113.9307 | NLL: 19.1574 | KL: 121.0077
+Epoch 0800 | Beta: 0.80 | Loss: 119.0756 | NLL: 21.7079 | KL: 121.0687
+Epoch 0850 | Beta: 0.82 | Loss: 117.2974 | NLL: 17.0083 | KL: 121.8242
+Epoch 0900 | Beta: 0.84 | Loss: 117.5200 | NLL: 17.0080 | KL: 119.6033
+Epoch 0950 | Beta: 0.86 | Loss: 130.7261 | NLL: 27.8381 | KL: 120.2153
+Epoch 1000 | Beta: 0.87 | Loss: 121.7029 | NLL: 19.1062 | KL: 117.9477
+Correlation Heatmap saved to paper_plots\run_GPU_20260105_194517/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 274
+Violazioni Attese: 13.7
+Violazioni Osservate: 25
+Frequenza Osservata: 0.0912 (Target: 0.0500)
+LR Statistic: 7.9718 | P-Value: 0.0048
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=224, n01=24, n10=24, n11=1
+LR Independence: 1.0733 (p-value: 0.3002)
+LR Conditional Coverage (CC): 9.0451 | P-Value CC: 0.0109
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_GPU_20260105_194517/var_regimes_plot.png'
+
+>>> Analysis Complete.
+
+------------------------------------------------
+
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_GPU_20260105_195442
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_GPU_20260105_195442
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 28
+latent_dim: 10
+hidden_dim: 29
+batch_size: 140
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_GPU_20260105_195442
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 4.3
+annealing_decay_rate: 0.96
+annealing_steps: 20
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2018-10-02
+Data Analysis End Date:   2021-06-30
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0050 | Beta: 0.10 | Loss: 123.0986 | NLL: 113.1766 | KL: 104.2501
+Epoch 0100 | Beta: 0.18 | Loss: 112.0362 | NLL: 91.1244 | KL: 114.2963
+Epoch 0150 | Beta: 0.26 | Loss: 89.0060 | NLL: 55.6006 | KL: 127.3893
+Epoch 0200 | Beta: 0.33 | Loss: 83.3523 | NLL: 42.2723 | KL: 123.0643
+Epoch 0250 | Beta: 0.40 | Loss: 81.8140 | NLL: 36.1970 | KL: 114.4882
+Epoch 0300 | Beta: 0.46 | Loss: 83.1344 | NLL: 31.6596 | KL: 112.6842
+Epoch 0350 | Beta: 0.51 | Loss: 85.6240 | NLL: 29.8895 | KL: 109.3891
+Epoch 0400 | Beta: 0.56 | Loss: 85.6361 | NLL: 25.8019 | KL: 107.4041
+Epoch 0450 | Beta: 0.60 | Loss: 86.4550 | NLL: 24.5429 | KL: 103.1755
+Epoch 0500 | Beta: 0.64 | Loss: 87.7262 | NLL: 20.7322 | KL: 104.8638
+Epoch 0550 | Beta: 0.67 | Loss: 87.6607 | NLL: 20.7191 | KL: 99.3340
+Epoch 0600 | Beta: 0.71 | Loss: 86.9951 | NLL: 18.5943 | KL: 96.9480
+Epoch 0650 | Beta: 0.73 | Loss: 89.9725 | NLL: 18.9325 | KL: 96.7702
+Epoch 0700 | Beta: 0.76 | Loss: 93.1668 | NLL: 18.2606 | KL: 98.5728
+Epoch 0750 | Beta: 0.78 | Loss: 90.2041 | NLL: 16.4240 | KL: 94.2032
+Epoch 0800 | Beta: 0.80 | Loss: 91.1926 | NLL: 15.5318 | KL: 94.0779
+Epoch 0850 | Beta: 0.82 | Loss: 93.0165 | NLL: 16.4151 | KL: 93.0500
+Epoch 0900 | Beta: 0.84 | Loss: 91.7247 | NLL: 14.4729 | KL: 91.9250
+Epoch 0950 | Beta: 0.86 | Loss: 98.5579 | NLL: 19.5028 | KL: 92.3686
+Epoch 1000 | Beta: 0.87 | Loss: 95.1483 | NLL: 16.3754 | KL: 90.5593
+Correlation Heatmap saved to paper_plots\run_GPU_20260105_195442/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 274
+Violazioni Attese: 13.7
+Violazioni Osservate: 25
+Frequenza Osservata: 0.0912 (Target: 0.0500)
+LR Statistic: 7.9718 | P-Value: 0.0048
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=224, n01=24, n10=24, n11=1
+LR Independence: 1.0733 (p-value: 0.3002)
+LR Conditional Coverage (CC): 9.0451 | P-Value CC: 0.0109
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+Grafico regimi salvato in 'paper_plots\run_GPU_20260105_195442/var_regimes_plot.png'
+
+>>> Analysis Complete.
+
+------------------------------------------------
+
+Risolto il problema di nidificazione delle directory.
+Attualmente la directory per i plot è: paper_plots\run_GPU_20260105_200405
+>>> Risultati di questa esecuzione salvati in: paper_plots\run_GPU_20260105_200405
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 28
+latent_dim: 10
+hidden_dim: 30
+batch_size: 140
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.001
+l2_reg: 0.0
+data_path: dataset/log_returns.csv
+plot_dir: paper_plots\run_GPU_20260105_200405
+device: cpu
+seed: 42
+train_split: 0.7
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 4.3
+annealing_decay_rate: 0.96
+annealing_steps: 20
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2018-10-02
+Data Analysis End Date:   2021-06-30
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0050 | Beta: 0.10 | Loss: 127.5861 | NLL: 114.1715 | KL: 140.9461
+Epoch 0100 | Beta: 0.18 | Loss: 118.3568 | NLL: 92.4158 | KL: 141.7842
+Epoch 0150 | Beta: 0.26 | Loss: 105.6621 | NLL: 64.7423 | KL: 156.0452
+Epoch 0200 | Beta: 0.33 | Loss: 97.8464 | NLL: 46.7250 | KL: 153.1458
+Epoch 0250 | Beta: 0.40 | Loss: 99.1047 | NLL: 38.7598 | KL: 151.4516
+Epoch 0300 | Beta: 0.46 | Loss: 102.1834 | NLL: 35.8449 | KL: 145.2225
+Epoch 0350 | Beta: 0.51 | Loss: 103.2490 | NLL: 31.5936 | KL: 140.6366
