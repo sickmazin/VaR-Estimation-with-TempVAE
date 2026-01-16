@@ -1,0 +1,74 @@
+>>> Risultati di questa esecuzione salvati in: paper_plots\ORIGINALE_paper
+
+==================================================
+CONFIGURAZIONE ESPERIMENTO
+==================================================
+seq_length: 15
+latent_dim: 10
+hidden_dim: 56
+batch_size: 112
+epochs: 1000
+annealing_epochs: 100
+learning_rate: 0.0025328969969139426
+l2_reg: 0.000776732997876881
+data_path: dataset/log_returns_paper.csv
+plot_dir: paper_plots\ORIGINALE_paper
+device: cpu
+seed: 42
+train_split: 0.66
+dropout_rate: 0.1
+free_bits: 2.0
+gradient_clip: 4.276716625328489
+annealing_decay_rate: 0.96
+annealing_steps: 20
+==================================================
+
+>>> 1. Loading Dataset...
+--------------------------------------------------
+Data Analysis Start Date: 2018-10-02
+Data Analysis End Date:   2021-06-30
+--------------------------------------------------
+>>> 2. Starting Training Loop...
+Epoch 0050 | Beta: 0.10 | Loss: 161.1981 | NLL: 147.9460 | KL: 139.2395
+Epoch 0100 | Beta: 0.18 | Loss: 136.2378 | NLL: 109.0327 | KL: 148.6933
+Epoch 0150 | Beta: 0.26 | Loss: 127.1385 | NLL: 88.5901 | KL: 147.0019
+Epoch 0200 | Beta: 0.33 | Loss: 122.6352 | NLL: 76.0541 | KL: 139.5442
+Epoch 0250 | Beta: 0.40 | Loss: 123.3355 | NLL: 69.4917 | KL: 135.1354
+Epoch 0300 | Beta: 0.46 | Loss: 122.5952 | NLL: 62.7648 | KL: 130.9754
+Epoch 0350 | Beta: 0.51 | Loss: 123.9344 | NLL: 59.0799 | KL: 127.2887
+Epoch 0400 | Beta: 0.56 | Loss: 125.6426 | NLL: 57.4457 | KL: 122.4153
+Epoch 0450 | Beta: 0.60 | Loss: 125.4138 | NLL: 53.4995 | KL: 119.8441
+Epoch 0500 | Beta: 0.64 | Loss: 127.7394 | NLL: 51.9223 | KL: 118.6743
+Epoch 0550 | Beta: 0.67 | Loss: 129.2714 | NLL: 51.0145 | KL: 116.1246
+Epoch 0600 | Beta: 0.71 | Loss: 128.8750 | NLL: 47.7528 | KL: 114.9786
+Epoch 0650 | Beta: 0.73 | Loss: 130.6370 | NLL: 49.0498 | KL: 111.1376
+Epoch 0700 | Beta: 0.76 | Loss: 131.6848 | NLL: 48.0213 | KL: 110.0971
+Epoch 0750 | Beta: 0.78 | Loss: 132.1711 | NLL: 46.9131 | KL: 108.8584
+Epoch 0800 | Beta: 0.80 | Loss: 131.8996 | NLL: 45.6128 | KL: 107.2906
+Epoch 0850 | Beta: 0.82 | Loss: 133.5420 | NLL: 45.0166 | KL: 107.5345
+Epoch 0900 | Beta: 0.84 | Loss: 134.3303 | NLL: 46.0673 | KL: 105.0277
+Epoch 0950 | Beta: 0.86 | Loss: 134.2393 | NLL: 44.9706 | KL: 104.3024
+Epoch 1000 | Beta: 0.87 | Loss: 134.8877 | NLL: 43.6458 | KL: 104.8939
+>>> Modello salvato correttamente in: paper_plots\ORIGINALE_paper\best_model.pth
+Correlation Heatmap saved to paper_plots\ORIGINALE_paper/latent_heatmap.png
+
+>>> Generating 1000 Monte Carlo Scenarios for VaR...
+
+--- Kupiec POF Test ---
+Totale Giorni: 227
+Violazioni Attese: 11.4
+Violazioni Osservate: 42
+Frequenza Osservata: 0.1850 (Target: 0.0500)
+LR Statistic: 53.1886 | P-Value: 0.0000
+RISULTATO: RIGETTO H0. Il modello NON è calibrato correttamente.
+
+--- Christoffersen Conditional Coverage Test ---
+Transizioni: n00=152, n01=33, n10=32, n11=9
+LR Independence: 0.3630 (p-value: 0.5469)
+LR Conditional Coverage (CC): 53.5516 | P-Value CC: 0.0000
+RISULTATO: RIGETTO H0. Il modello fallisce il test condizionale.
+
+>>> Analysis Complete.
+
+==================================================
+

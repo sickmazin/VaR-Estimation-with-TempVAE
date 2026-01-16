@@ -1,0 +1,4 @@
+MIGLIORI PARAMETRI (ROBUST SCAN):
+{'seq_length': 15, 'hidden_dim': 56, 'batch_size': 112, 'gradient_clip': 4.276716625328489, 'learning_rate': 0.0025328969969139426, 'use_l2': True, 'l2_reg': 0.000776732997876881}
+
+Best Loss: 254.41702016194662
