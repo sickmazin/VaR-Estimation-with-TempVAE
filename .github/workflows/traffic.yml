@@ -1,0 +1,21 @@
+name: GitHub Traffic Counts
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Esegue ogni giorno a mezzanotte
+  workflow_dispatch: # Permette di lanciarlo manualmente
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          
+      - name: Traffic Badge
+        uses: yi-Xu-0100/traffic-to-badge@v1.4.0
+        with:
+          my_token: ${{ secrets.Traffic_Token_Repo }} 
+          static_list: '${{ github.repository }}'
+          traffic_branch: traffic 
